@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9B95D09287CA02400ADC43F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D08287CA02400ADC43F /* View+Extensions.swift */; };
+		C9ED2EA2287C745100BA3228 /* MabyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EA1287C745100BA3228 /* MabyApp.swift */; };
+		C9ED2EA9287C745100BA3228 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EA8287C745100BA3228 /* ContentView.swift */; };
+		C9ED2EAB287C745300BA3228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9ED2EAA287C745300BA3228 /* Assets.xcassets */; };
+		C9ED2EAF287C745300BA3228 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9ED2EAE287C745300BA3228 /* Preview Assets.xcassets */; };
+		C9ED2EB9287C745300BA3228 /* MabyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EB8287C745300BA3228 /* MabyTests.swift */; };
+		C9ED2EC3287C745300BA3228 /* MabyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EC2287C745300BA3228 /* MabyUITests.swift */; };
+		C9ED2EC5287C745300BA3228 /* MabyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EC4287C745300BA3228 /* MabyUITestsLaunchTests.swift */; };
+		C9ED2ED5287C98C000BA3228 /* MabyKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9ED2ED4287C98C000BA3228 /* MabyKit */; };
+		C9ED2EDB287C995300BA3228 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = C9ED2EDA287C995300BA3228 /* Factory */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9ED2EB5287C745300BA3228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9ED2E96287C745100BA3228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9ED2E9D287C745100BA3228;
+			remoteInfo = Maby;
+		};
+		C9ED2EBF287C745300BA3228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9ED2E96287C745100BA3228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9ED2E9D287C745100BA3228;
+			remoteInfo = Maby;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9B95D08287CA02400ADC43F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		C9ED2E9E287C745100BA3228 /* Maby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9ED2EA1287C745100BA3228 /* MabyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MabyApp.swift; sourceTree = "<group>"; };
+		C9ED2EA8287C745100BA3228 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C9ED2EAA287C745300BA3228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9ED2EAC287C745300BA3228 /* Maby.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Maby.entitlements; sourceTree = "<group>"; };
+		C9ED2EAE287C745300BA3228 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C9ED2EB4287C745300BA3228 /* MabyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MabyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9ED2EB8287C745300BA3228 /* MabyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MabyTests.swift; sourceTree = "<group>"; };
+		C9ED2EBE287C745300BA3228 /* MabyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MabyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9ED2EC2287C745300BA3228 /* MabyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MabyUITests.swift; sourceTree = "<group>"; };
+		C9ED2EC4287C745300BA3228 /* MabyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MabyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C9ED2ED2287C971600BA3228 /* MabyKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MabyKit; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9ED2E9B287C745100BA3228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9ED2ED5287C98C000BA3228 /* MabyKit in Frameworks */,
+				C9ED2EDB287C995300BA3228 /* Factory in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9ED2EB1287C745300BA3228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9ED2EBB287C745300BA3228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9B95D07287CA01800ADC43F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C9B95D08287CA02400ADC43F /* View+Extensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C9ED2E95287C745100BA3228 = {
+			isa = PBXGroup;
+			children = (
+				C9ED2ED2287C971600BA3228 /* MabyKit */,
+				C9ED2EA0287C745100BA3228 /* Maby */,
+				C9ED2EB7287C745300BA3228 /* MabyTests */,
+				C9ED2EC1287C745300BA3228 /* MabyUITests */,
+				C9ED2E9F287C745100BA3228 /* Products */,
+				C9ED2ED3287C98C000BA3228 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C9ED2E9F287C745100BA3228 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9ED2E9E287C745100BA3228 /* Maby.app */,
+				C9ED2EB4287C745300BA3228 /* MabyTests.xctest */,
+				C9ED2EBE287C745300BA3228 /* MabyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9ED2EA0287C745100BA3228 /* Maby */ = {
+			isa = PBXGroup;
+			children = (
+				C9B95D07287CA01800ADC43F /* Common */,
+				C9ED2EA1287C745100BA3228 /* MabyApp.swift */,
+				C9ED2EA8287C745100BA3228 /* ContentView.swift */,
+				C9ED2EAA287C745300BA3228 /* Assets.xcassets */,
+				C9ED2EAC287C745300BA3228 /* Maby.entitlements */,
+				C9ED2EAD287C745300BA3228 /* Preview Content */,
+			);
+			path = Maby;
+			sourceTree = "<group>";
+		};
+		C9ED2EAD287C745300BA3228 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C9ED2EAE287C745300BA3228 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C9ED2EB7287C745300BA3228 /* MabyTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9ED2EB8287C745300BA3228 /* MabyTests.swift */,
+			);
+			path = MabyTests;
+			sourceTree = "<group>";
+		};
+		C9ED2EC1287C745300BA3228 /* MabyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9ED2EC2287C745300BA3228 /* MabyUITests.swift */,
+				C9ED2EC4287C745300BA3228 /* MabyUITestsLaunchTests.swift */,
+			);
+			path = MabyUITests;
+			sourceTree = "<group>";
+		};
+		C9ED2ED3287C98C000BA3228 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9ED2E9D287C745100BA3228 /* Maby */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9ED2EC8287C745300BA3228 /* Build configuration list for PBXNativeTarget "Maby" */;
+			buildPhases = (
+				C9ED2E9A287C745100BA3228 /* Sources */,
+				C9ED2E9B287C745100BA3228 /* Frameworks */,
+				C9ED2E9C287C745100BA3228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Maby;
+			packageProductDependencies = (
+				C9ED2ED4287C98C000BA3228 /* MabyKit */,
+				C9ED2EDA287C995300BA3228 /* Factory */,
+			);
+			productName = Maby;
+			productReference = C9ED2E9E287C745100BA3228 /* Maby.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9ED2EB3287C745300BA3228 /* MabyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9ED2ECB287C745300BA3228 /* Build configuration list for PBXNativeTarget "MabyTests" */;
+			buildPhases = (
+				C9ED2EB0287C745300BA3228 /* Sources */,
+				C9ED2EB1287C745300BA3228 /* Frameworks */,
+				C9ED2EB2287C745300BA3228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9ED2EB6287C745300BA3228 /* PBXTargetDependency */,
+			);
+			name = MabyTests;
+			productName = MabyTests;
+			productReference = C9ED2EB4287C745300BA3228 /* MabyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9ED2EBD287C745300BA3228 /* MabyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9ED2ECE287C745300BA3228 /* Build configuration list for PBXNativeTarget "MabyUITests" */;
+			buildPhases = (
+				C9ED2EBA287C745300BA3228 /* Sources */,
+				C9ED2EBB287C745300BA3228 /* Frameworks */,
+				C9ED2EBC287C745300BA3228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9ED2EC0287C745300BA3228 /* PBXTargetDependency */,
+			);
+			name = MabyUITests;
+			productName = MabyUITests;
+			productReference = C9ED2EBE287C745300BA3228 /* MabyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9ED2E96287C745100BA3228 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					C9ED2E9D287C745100BA3228 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					C9ED2EB3287C745300BA3228 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = C9ED2E9D287C745100BA3228;
+					};
+					C9ED2EBD287C745300BA3228 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = C9ED2E9D287C745100BA3228;
+					};
+				};
+			};
+			buildConfigurationList = C9ED2E99287C745100BA3228 /* Build configuration list for PBXProject "Maby" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9ED2E95287C745100BA3228;
+			packageReferences = (
+				C9ED2ED9287C995300BA3228 /* XCRemoteSwiftPackageReference "Factory" */,
+			);
+			productRefGroup = C9ED2E9F287C745100BA3228 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9ED2E9D287C745100BA3228 /* Maby */,
+				C9ED2EB3287C745300BA3228 /* MabyTests */,
+				C9ED2EBD287C745300BA3228 /* MabyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9ED2E9C287C745100BA3228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9ED2EAF287C745300BA3228 /* Preview Assets.xcassets in Resources */,
+				C9ED2EAB287C745300BA3228 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9ED2EB2287C745300BA3228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9ED2EBC287C745300BA3228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9ED2E9A287C745100BA3228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9ED2EA2287C745100BA3228 /* MabyApp.swift in Sources */,
+				C9B95D09287CA02400ADC43F /* View+Extensions.swift in Sources */,
+				C9ED2EA9287C745100BA3228 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9ED2EB0287C745300BA3228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9ED2EB9287C745300BA3228 /* MabyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9ED2EBA287C745300BA3228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9ED2EC3287C745300BA3228 /* MabyUITests.swift in Sources */,
+				C9ED2EC5287C745300BA3228 /* MabyUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9ED2EB6287C745300BA3228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9ED2E9D287C745100BA3228 /* Maby */;
+			targetProxy = C9ED2EB5287C745300BA3228 /* PBXContainerItemProxy */;
+		};
+		C9ED2EC0287C745300BA3228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9ED2E9D287C745100BA3228 /* Maby */;
+			targetProxy = C9ED2EBF287C745300BA3228 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C9ED2EC6287C745300BA3228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9ED2EC7287C745300BA3228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C9ED2EC9287C745300BA3228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Maby/Maby.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Maby/Preview Content\"";
+				DEVELOPMENT_TEAM = 399Y562TGG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.Maby;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9ED2ECA287C745300BA3228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Maby/Maby.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Maby/Preview Content\"";
+				DEVELOPMENT_TEAM = 399Y562TGG;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.Maby;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C9ED2ECC287C745300BA3228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 399Y562TGG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.MabyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maby.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Maby";
+			};
+			name = Debug;
+		};
+		C9ED2ECD287C745300BA3228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 399Y562TGG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.MabyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maby.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Maby";
+			};
+			name = Release;
+		};
+		C9ED2ECF287C745300BA3228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 399Y562TGG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.MabyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Maby;
+			};
+			name = Debug;
+		};
+		C9ED2ED0287C745300BA3228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 399Y562TGG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.MabyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Maby;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9ED2E99287C745100BA3228 /* Build configuration list for PBXProject "Maby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9ED2EC6287C745300BA3228 /* Debug */,
+				C9ED2EC7287C745300BA3228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9ED2EC8287C745300BA3228 /* Build configuration list for PBXNativeTarget "Maby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9ED2EC9287C745300BA3228 /* Debug */,
+				C9ED2ECA287C745300BA3228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9ED2ECB287C745300BA3228 /* Build configuration list for PBXNativeTarget "MabyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9ED2ECC287C745300BA3228 /* Debug */,
+				C9ED2ECD287C745300BA3228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9ED2ECE287C745300BA3228 /* Build configuration list for PBXNativeTarget "MabyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9ED2ECF287C745300BA3228 /* Debug */,
+				C9ED2ED0287C745300BA3228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9ED2ED9287C995300BA3228 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9ED2ED4287C98C000BA3228 /* MabyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MabyKit;
+		};
+		C9ED2EDA287C995300BA3228 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9ED2ED9287C995300BA3228 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C9ED2E96287C745100BA3228 /* Project object */;
+}

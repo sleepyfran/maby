@@ -6,10 +6,9 @@ public struct PersistenceController {
     public static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
+        
+        // TODO: Initialize test data here.
+        
         do {
             try viewContext.save()
         } catch {

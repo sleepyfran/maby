@@ -4,6 +4,13 @@ import MabyKit
 import SwiftUI
 
 struct ContentView: View {
+    @FetchRequest(
+        entity: Baby.entity(),
+        sortDescriptors: []
+    ) private var babies: FetchedResults<Baby>
+    
+    @State private var showingAddBaby = false
+    
     var body: some View {
         TabView {
             AddEventView()
@@ -15,6 +22,13 @@ struct ContentView: View {
                 .tabItem {
                     Label("Journal", systemImage: "book")
                 }
+        }
+        .sheet(isPresented: $showingAddBaby) {
+            AddBabyView()
+                .interactiveDismissDisabled(true)
+        }
+        .onAppear {
+            showingAddBaby = babies.isEmpty
         }
     }
 }

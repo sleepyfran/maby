@@ -8,6 +8,15 @@
         "revision" : "bb3cfd694f73d281cd38047eaf05d12e544c69f5",
         "version" : "1.2.4"
       }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
+        "version" : "1.4.2"
+      }
     }
   ],
   "version" : 2

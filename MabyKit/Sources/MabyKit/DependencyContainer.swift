@@ -1,5 +1,6 @@
 import Factory
 import Foundation
+import Logging
 
 extension Container {
     // MARK: - Database & data related stuff
@@ -11,9 +12,19 @@ extension Container {
         database().container
     }
     
-    #if DEBUG
+#if DEBUG
     public static let previewContainer = Factory(scope: .singleton) {
         PersistenceController.preview.container
     }
-    #endif
+#endif
+    
+    // MARK: - Services
+    public static let babyService = Factory {
+        BabyService(database: database(), logger: logger())
+    }
+    
+    // MARK: - Utilities
+    public static let logger = Factory {
+        Logger(label: "Maby")
+    }
 }

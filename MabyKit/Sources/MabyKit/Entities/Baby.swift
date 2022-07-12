@@ -12,7 +12,7 @@ public final class Baby: NSManagedObject, Identifiable {
     @NSManaged public var birthday: Date
     @NSManaged public var gender: Gender
     
-    convenience init(
+    public convenience init(
         context: NSManagedObjectContext,
         name: String,
         birthday: Date,

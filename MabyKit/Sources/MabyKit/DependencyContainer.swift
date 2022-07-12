@@ -16,6 +16,10 @@ extension Container {
     public static let previewContainer = Factory(scope: .singleton) {
         PersistenceController.preview.container
     }
+    
+    public static let emptyPreviewContainer = Factory(scope: .singleton) {
+        PersistenceController(inMemory: true).container
+    }
 #endif
     
     // MARK: - Services

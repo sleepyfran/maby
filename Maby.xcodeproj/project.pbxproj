@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C953DD3D287E0C0700F1E1B7 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C953DD3C287E0C0700F1E1B7 /* AddEventView.swift */; };
 		C9B95D09287CA02400ADC43F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D08287CA02400ADC43F /* View+Extensions.swift */; };
 		C9B95D0D287DA6C800ADC43F /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D0C287DA6C800ADC43F /* JournalView.swift */; };
-		C9B95D0F287DA6E300ADC43F /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D0E287DA6E300ADC43F /* AddEventView.swift */; };
 		C9B95D12287DA9D000ADC43F /* AddBabyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D11287DA9D000ADC43F /* AddBabyView.swift */; };
 		C9B95D14287DAD9C00ADC43F /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D13287DAD9C00ADC43F /* ButtonStyles.swift */; };
+		C9B95D16287DF50D00ADC43F /* BabyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D15287DF50D00ADC43F /* BabyCard.swift */; };
 		C9ED2EA2287C745100BA3228 /* MabyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EA1287C745100BA3228 /* MabyApp.swift */; };
 		C9ED2EA9287C745100BA3228 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EA8287C745100BA3228 /* ContentView.swift */; };
 		C9ED2EAB287C745300BA3228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9ED2EAA287C745300BA3228 /* Assets.xcassets */; };
@@ -41,11 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C953DD3C287E0C0700F1E1B7 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		C9B95D08287CA02400ADC43F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		C9B95D0C287DA6C800ADC43F /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
-		C9B95D0E287DA6E300ADC43F /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		C9B95D11287DA9D000ADC43F /* AddBabyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBabyView.swift; sourceTree = "<group>"; };
 		C9B95D13287DAD9C00ADC43F /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		C9B95D15287DF50D00ADC43F /* BabyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCard.swift; sourceTree = "<group>"; };
 		C9ED2E9E287C745100BA3228 /* Maby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9ED2EA1287C745100BA3228 /* MabyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MabyApp.swift; sourceTree = "<group>"; };
 		C9ED2EA8287C745100BA3228 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C953DD39287E0B3E00F1E1B7 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				C953DD3C287E0C0700F1E1B7 /* AddEventView.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		C9B95D07287CA01800ADC43F /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,14 +104,6 @@
 				C9B95D13287DAD9C00ADC43F /* ButtonStyles.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		C9B95D0A287DA6BA00ADC43F /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				C9B95D0E287DA6E300ADC43F /* AddEventView.swift */,
-			);
-			path = Events;
 			sourceTree = "<group>";
 		};
 		C9B95D0B287DA6BF00ADC43F /* Journal */ = {
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				C9B95D11287DA9D000ADC43F /* AddBabyView.swift */,
+				C9B95D15287DF50D00ADC43F /* BabyCard.swift */,
 			);
 			path = Baby;
 			sourceTree = "<group>";
@@ -145,9 +148,9 @@
 		C9ED2EA0287C745100BA3228 /* Maby */ = {
 			isa = PBXGroup;
 			children = (
+				C953DD39287E0B3E00F1E1B7 /* Events */,
 				C9B95D10287DA99A00ADC43F /* Baby */,
 				C9B95D0B287DA6BF00ADC43F /* Journal */,
-				C9B95D0A287DA6BA00ADC43F /* Events */,
 				C9B95D07287CA01800ADC43F /* Common */,
 				C9ED2EA1287C745100BA3228 /* MabyApp.swift */,
 				C9ED2EA8287C745100BA3228 /* ContentView.swift */,
@@ -328,8 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B95D12287DA9D000ADC43F /* AddBabyView.swift in Sources */,
-				C9B95D0F287DA6E300ADC43F /* AddEventView.swift in Sources */,
+				C9B95D16287DF50D00ADC43F /* BabyCard.swift in Sources */,
 				C9ED2EA2287C745100BA3228 /* MabyApp.swift in Sources */,
+				C953DD3D287E0C0700F1E1B7 /* AddEventView.swift in Sources */,
 				C9B95D09287CA02400ADC43F /* View+Extensions.swift in Sources */,
 				C9B95D14287DAD9C00ADC43F /* ButtonStyles.swift in Sources */,
 				C9B95D0D287DA6C800ADC43F /* JournalView.swift in Sources */,

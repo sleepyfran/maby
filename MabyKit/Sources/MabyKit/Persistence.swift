@@ -7,7 +7,19 @@ public struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         
-        // TODO: Initialize test data here.
+        let babyJohn = Baby(
+            context: viewContext,
+            name: "John",
+            birthday: Calendar.current.date(byAdding: .month, value: -2, to: Date.now)!,
+            gender: Baby.Gender.boy
+        )
+        
+        let babyCassandra = Baby(
+            context: viewContext,
+            name: "Cassandra",
+            birthday: Calendar.current.date(byAdding: .weekOfMonth, value: -2, to: Date.now)!,
+            gender: Baby.Gender.girl
+        )
         
         do {
             try viewContext.save()

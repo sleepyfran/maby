@@ -4,24 +4,26 @@ import MabyKit
 import SwiftUI
 
 struct ContentView: View {
-    @FetchRequest(
-        entity: Baby.entity(),
-        sortDescriptors: []
-    ) private var babies: FetchedResults<Baby>
+    @FetchRequest(fetchRequest: allBabies())
+    private var babies: FetchedResults<Baby>
     
     @State private var showingAddBaby = false
     
     var body: some View {
-        TabView {
-            AddEventView()
-                .tabItem {
-                    Label("Add event", systemImage: "plus")
+        VStack {
+            if !babies.isEmpty {
+                TabView {
+                    AddEventView()
+                        .tabItem {
+                            Label("Add event", systemImage: "plus")
+                        }
+                    
+                    JournalView()
+                        .tabItem {
+                            Label("Journal", systemImage: "book")
+                        }
                 }
-            
-            JournalView()
-                .tabItem {
-                    Label("Journal", systemImage: "book")
-                }
+            }
         }
         .sheet(isPresented: $showingAddBaby) {
             AddBabyView()
@@ -37,5 +39,10 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .mockedDependencies()
+            .previewDisplayName("With data")
+        
+        ContentView()
+            .mockedDependencies(empty: true)
+            .previewDisplayName("Without data")
     }
 }

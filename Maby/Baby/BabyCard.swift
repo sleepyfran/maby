@@ -16,7 +16,7 @@ struct BabyCard: View {
                     Text(baby.name)
                         .font(.title)
                     
-                    Text(baby.age.text)
+                    Text(baby.formattedAge)
                         .font(.callout)
                         .foregroundColor(.gray)
                 }
@@ -36,7 +36,11 @@ struct BabyCard_Previews: PreviewProvider {
         BabyCard(baby: Baby(
             context: Container.previewContainer().viewContext,
             name: "Test Baby",
-            birthday: Date.now.addingTimeInterval(-1000000),
+            birthday: Calendar.current.date(
+                byAdding: .weekOfMonth,
+                value: -10,
+                to: Date.now
+            )!,
             gender: Baby.Gender.boy
         ))
     }

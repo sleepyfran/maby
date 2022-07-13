@@ -13,7 +13,7 @@ struct ContentView: View {
         VStack {
             if !babies.isEmpty {
                 TabView {
-                    AddEventView()
+                    AddEventListView()
                         .tabItem {
                             Label("Add event", systemImage: "plus")
                         }

@@ -27,6 +27,10 @@ extension Container {
         BabyService(database: database(), logger: logger())
     }
     
+    public static let eventService = Factory {
+        EventService(database: database(), logger: logger())
+    }
+    
     // MARK: - Utilities
     public static let logger = Factory {
         Logger(label: "Maby")

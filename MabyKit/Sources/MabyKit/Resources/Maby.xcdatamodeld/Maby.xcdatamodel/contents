@@ -5,13 +5,23 @@
         <attribute name="gender" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Event" representedClassName="MabyKit.Event" syncable="YES">
-        <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    <entity name="DiaperEvent" representedClassName="MabyKit.DiaperEvent" parentEntity="Event" syncable="YES">
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="MabyKit.Event" isAbstract="YES" syncable="YES">
         <attribute name="start" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="NursingEvent" representedClassName="MabyKit.NursingEvent" parentEntity="Event" syncable="YES">
+        <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="SleepEvent" representedClassName="MabyKit.SleepEvent" parentEntity="Event" syncable="YES">
+        <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
         <element name="Baby" positionX="-63" positionY="-18" width="128" height="74"/>
-        <element name="Event" positionX="-63" positionY="9" width="128" height="74"/>
+        <element name="Event" positionX="-63" positionY="9" width="128" height="44"/>
+        <element name="NursingEvent" positionX="-63" positionY="9" width="128" height="44"/>
+        <element name="SleepEvent" positionX="-54" positionY="18" width="128" height="44"/>
+        <element name="DiaperEvent" positionX="-36" positionY="27" width="128" height="44"/>
     </elements>
 </model>

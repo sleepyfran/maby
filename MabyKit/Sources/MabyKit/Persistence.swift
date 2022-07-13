@@ -17,7 +17,7 @@ public struct PersistenceController {
         let babyCassandra = Baby(
             context: viewContext,
             name: "Cassandra",
-            birthday: Calendar.current.date(byAdding: .weekOfMonth, value: -2, to: Date.now)!,
+            birthday: Calendar.current.date(byAdding: .day, value: -23, to: Date.now)!,
             gender: Baby.Gender.girl
         )
         

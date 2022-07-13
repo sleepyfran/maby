@@ -57,7 +57,10 @@ struct AddEventListView: View {
                 AddDiaperEventView()
                     .presentationDetents([.medium])
                     .presentationDragIndicator(.visible)
-            case .nursing: EmptyView()
+            case .nursing:
+                AddNursingEventView()
+                    .presentationDetents([.medium])
+                    .presentationDragIndicator(.visible)
             case .sleep: EmptyView()
             }
         }

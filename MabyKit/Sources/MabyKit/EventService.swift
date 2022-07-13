@@ -33,4 +33,22 @@ public class EventService {
         
         return save(event: event)
     }
+    
+    /// Adds a new nursing event to the database if the provided dates are valid.
+    public func addNursing(
+        start: Date,
+        end: Date
+    ) -> Result<NursingEvent, AddError> {
+        if start > end {
+            return .failure(.invalidData)
+        }
+        
+        let event = NursingEvent(
+            context: database.container.viewContext,
+            start: start,
+            end: end
+        )
+        
+        return save(event: event)
+    }
 }

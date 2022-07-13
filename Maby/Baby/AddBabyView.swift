@@ -11,17 +11,6 @@ struct AddBabyView: View {
     @State private var gender = Baby.Gender.boy
     @State private var birthday = Date.now
     
-    private var birthdayRange: ClosedRange<Date> {
-        let now = Date.now
-        let fiveYearsAgo = Calendar.current.date(
-            byAdding: .year,
-            value: -5,
-            to: Date.now
-        )!
-        
-        return fiveYearsAgo...now
-    }
-    
     private var disableAddButton: Bool {
         !isValidBaby(name: name, birthday: birthday)
     }
@@ -72,7 +61,7 @@ struct AddBabyView: View {
                     DatePicker(
                         "Birthday",
                         selection: $birthday,
-                        in: birthdayRange,
+                        in: Date.distantPast...Date.now,
                         displayedComponents: [.date]
                     )
                 }

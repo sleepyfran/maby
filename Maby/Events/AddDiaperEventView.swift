@@ -33,7 +33,7 @@ struct AddDiaperEventView: View {
             Section() {
                 DatePicker("Date", selection: $date)
                 
-                Picker("", selection: $diaperType) {
+                Picker("Diaper type", selection: $diaperType) {
                     Text("Wet").tag(DiaperEvent.DiaperType.wet)
                     Text("Dirty").tag(DiaperEvent.DiaperType.dirty)
                     Text("Mixed").tag(DiaperEvent.DiaperType.mixed)

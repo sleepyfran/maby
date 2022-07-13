@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C953DD3D287E0C0700F1E1B7 /* AddEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C953DD3C287E0C0700F1E1B7 /* AddEventListView.swift */; };
 		C953DD41287F011B00F1E1B7 /* AddDiaperEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C953DD40287F011B00F1E1B7 /* AddDiaperEventView.swift */; };
+		C953DD43287F206400F1E1B7 /* AddNursingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C953DD42287F206400F1E1B7 /* AddNursingEventView.swift */; };
 		C9B95D09287CA02400ADC43F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D08287CA02400ADC43F /* View+Extensions.swift */; };
 		C9B95D0D287DA6C800ADC43F /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D0C287DA6C800ADC43F /* JournalView.swift */; };
 		C9B95D12287DA9D000ADC43F /* AddBabyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D11287DA9D000ADC43F /* AddBabyView.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		C953DD3C287E0C0700F1E1B7 /* AddEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventListView.swift; sourceTree = "<group>"; };
 		C953DD40287F011B00F1E1B7 /* AddDiaperEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaperEventView.swift; sourceTree = "<group>"; };
+		C953DD42287F206400F1E1B7 /* AddNursingEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNursingEventView.swift; sourceTree = "<group>"; };
 		C9B95D08287CA02400ADC43F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		C9B95D0C287DA6C800ADC43F /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		C9B95D11287DA9D000ADC43F /* AddBabyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBabyView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				C953DD3C287E0C0700F1E1B7 /* AddEventListView.swift */,
 				C953DD40287F011B00F1E1B7 /* AddDiaperEventView.swift */,
+				C953DD42287F206400F1E1B7 /* AddNursingEventView.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C953DD43287F206400F1E1B7 /* AddNursingEventView.swift in Sources */,
 				C9B95D12287DA9D000ADC43F /* AddBabyView.swift in Sources */,
 				C9B95D16287DF50D00ADC43F /* BabyCard.swift in Sources */,
 				C9ED2EA2287C745100BA3228 /* MabyApp.swift in Sources */,

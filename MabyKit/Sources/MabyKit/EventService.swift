@@ -51,4 +51,22 @@ public class EventService {
         
         return save(event: event)
     }
+    
+    /// Adds a new sleep event to the database if the provided dates are valid.
+    public func addSleep(
+        start: Date,
+        end: Date
+    ) -> Result<SleepEvent, AddError> {
+        if start > end {
+            return .failure(.invalidData)
+        }
+        
+        let event = SleepEvent(
+            context: database.container.viewContext,
+            start: start,
+            end: end
+        )
+        
+        return save(event: event)
+    }
 }

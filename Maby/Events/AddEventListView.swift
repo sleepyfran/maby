@@ -61,7 +61,10 @@ struct AddEventListView: View {
                 AddNursingEventView()
                     .presentationDetents([.medium])
                     .presentationDragIndicator(.visible)
-            case .sleep: EmptyView()
+            case .sleep:
+                AddSleepEventView()
+                    .presentationDetents([.medium])
+                    .presentationDragIndicator(.visible)
             }
         }
     }

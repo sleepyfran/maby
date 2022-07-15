@@ -23,13 +23,7 @@ struct AddSleepEventView: View {
     }
     
     var body: some View {
-        Form {
-            Section() {
-                Text("🌝 Sleep")
-                    .font(.largeTitle)
-            }
-            .clearBackground()
-            
+        AddEventView("🌝 Sleep", onAdd: onAdd) {
             Section("Time") {
                 DatePicker(
                     "Start",
@@ -42,12 +36,6 @@ struct AddSleepEventView: View {
                     in: startDate...Date.distantFuture
                 )
             }
-            
-            Button(action: onAdd) {
-                Text("Add")
-            }
-            .buttonStyle(.primaryAction)
-            .clearBackground()
         }
     }
 }

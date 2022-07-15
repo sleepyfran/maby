@@ -28,13 +28,7 @@ struct AddNursingEventView: View {
     }
     
     var body: some View {
-        Form {
-            Section() {
-                Text("🍼 Nursing")
-                    .font(.largeTitle)
-            }
-            .clearBackground()
-            
+        AddEventView("🍼 Nursing", onAdd: onAdd) {
             Section("Time") {
                 DatePicker(
                     "Start",
@@ -57,12 +51,6 @@ struct AddNursingEventView: View {
                 }
                 .pickerStyle(.segmented)
             }
-            
-            Button(action: onAdd) {
-                Text("Add")
-            }
-            .buttonStyle(.primaryAction)
-            .clearBackground()
         }
     }
 }

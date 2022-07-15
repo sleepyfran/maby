@@ -23,13 +23,7 @@ struct AddDiaperEventView: View {
     }
     
     var body: some View {
-        Form {
-            Section() {
-                Text("🧷 Diaper change")
-                    .font(.largeTitle)
-            }
-            .clearBackground()
-            
+        AddEventView("🧷 Diaper change", onAdd: onAdd) {
             Section() {
                 DatePicker("Date", selection: $date)
                 
@@ -41,12 +35,6 @@ struct AddDiaperEventView: View {
                 }
                 .pickerStyle(.segmented)
             }
-            
-            Button(action: onAdd) {
-                Text("Add")
-            }
-            .buttonStyle(.primaryAction)
-            .clearBackground()
         }
     }
 }

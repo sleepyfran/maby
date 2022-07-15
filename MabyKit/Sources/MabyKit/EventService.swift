@@ -85,4 +85,18 @@ public class EventService {
         
         return save(event: event)
     }
+    
+    /// Adds a new diaper change event to the database.
+    public func addVomit(
+        date: Date,
+        quantity: VomitEvent.Quantity
+    ) -> Result<VomitEvent, AddError> {
+        let event = VomitEvent(
+            context: database.container.viewContext,
+            date: date,
+            quantity: quantity
+        )
+        
+        return save(event: event)
+    }
 }

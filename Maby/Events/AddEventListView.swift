@@ -2,7 +2,7 @@ import MabyKit
 import SwiftUI
 
 private enum EventType {
-    case nursing, diaper, sleep
+    case nursing, diaper, sleep, vomit
 }
 
 struct AddEventListView: View {
@@ -48,6 +48,10 @@ struct AddEventListView: View {
                 Button(action: { onSelect(type: .sleep) }) {
                     Text("🌝 Add sleep")
                 }
+                
+                Button(action: { onSelect(type: .vomit) }) {
+                    Text("🤢 Vomit")
+                }
             }
         }
         .sheet(isPresented: showingAddEvent, onDismiss: onDismiss) {
@@ -62,6 +66,10 @@ struct AddEventListView: View {
                     .presentationDragIndicator(.visible)
             case .sleep:
                 AddSleepEventView()
+                    .presentationDetents([.medium])
+                    .presentationDragIndicator(.visible)
+            case .vomit:
+                AddVomitEventView()
                     .presentationDetents([.medium])
                     .presentationDragIndicator(.visible)
             }

@@ -18,4 +18,7 @@
     <entity name="SleepEvent" representedClassName="MabyKit.SleepEvent" parentEntity="Event" syncable="YES">
         <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="VomitEvent" representedClassName="MabyKit.VomitEvent" parentEntity="Event" syncable="YES">
+        <attribute name="quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
 </model>

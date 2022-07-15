@@ -21,6 +21,19 @@ public class EventService {
         }
     }
     
+    /// Removes the given event from the database.
+    public func delete(events: [Event]) {
+        events.forEach { event in
+            database.container.viewContext.delete(event)
+        }
+        
+        do {
+            try database.container.viewContext.save()
+        } catch(let error) {
+            logger.error("Attempted to remove event, but failed with reason \(error)")
+        }
+    }
+    
     /// Adds a new diaper change event to the database.
     public func addDiaperChange(
         date: Date,

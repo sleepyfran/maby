@@ -16,7 +16,7 @@ struct BabyCard: View {
                     Text(baby.name)
                         .font(.title)
                     
-                    Text(baby.formattedAge)
+                    Text("\(baby.formattedAge) old")
                         .font(.callout)
                         .foregroundColor(.gray)
                 }
@@ -27,7 +27,6 @@ struct BabyCard: View {
         .background(.gray.opacity(0.2))
         .cornerRadius(10)
         .shadow(radius: 8)
-        .padding()
     }
 }
 

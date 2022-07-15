@@ -9,9 +9,14 @@ struct AddNursingEventView: View {
     
     @State private var startDate = Date.now
     @State private var endDate = Date.now
+    @State private var breast = NursingEvent.Breast.left
     
     private func onAdd() {
-        let result = eventService.addNursing(start: startDate, end: endDate)
+        let result = eventService.addNursing(
+            start: startDate,
+            end: endDate,
+            breast: breast
+        )
 
         switch(result) {
         case .success(_):
@@ -42,6 +47,15 @@ struct AddNursingEventView: View {
                     selection: $endDate,
                     in: startDate...Date.distantFuture
                 )
+            }
+            
+            Section("Breast") {
+                Picker("Breast", selection: $breast) {
+                    Text("Left").tag(NursingEvent.Breast.left)
+                    Text("Right").tag(NursingEvent.Breast.right)
+                    Text("Both").tag(NursingEvent.Breast.both)
+                }
+                .pickerStyle(.segmented)
             }
             
             Button(action: onAdd) {

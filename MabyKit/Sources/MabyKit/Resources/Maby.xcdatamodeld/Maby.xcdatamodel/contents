@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21223.12" systemVersion="22A5286j" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21256.2" systemVersion="22A5286j" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Baby" representedClassName="MabyKit.Baby" syncable="YES">
         <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="gender" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
@@ -12,16 +12,10 @@
         <attribute name="start" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="NursingEvent" representedClassName="MabyKit.NursingEvent" parentEntity="Event" syncable="YES">
+        <attribute name="breast" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="SleepEvent" representedClassName="MabyKit.SleepEvent" parentEntity="Event" syncable="YES">
         <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
-    <elements>
-        <element name="Baby" positionX="-63" positionY="-18" width="128" height="74"/>
-        <element name="Event" positionX="-63" positionY="9" width="128" height="44"/>
-        <element name="NursingEvent" positionX="-63" positionY="9" width="128" height="44"/>
-        <element name="SleepEvent" positionX="-54" positionY="18" width="128" height="44"/>
-        <element name="DiaperEvent" positionX="-36" positionY="27" width="128" height="44"/>
-    </elements>
 </model>

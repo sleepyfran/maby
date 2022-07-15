@@ -105,6 +105,17 @@ private struct DiaperEventDetails: View {
 private struct NursingEventDetails: View {
     let event: NursingEvent
     
+    private var breastText: String {
+        switch event.breast {
+        case .left:
+            return "left breast"
+        case .right:
+            return "right breast"
+        case .both:
+            return "both breasts"
+        }
+    }
+    
     private var formattedDate: String {
         event.start.formatted(.dateTime.hour().minute())
     }
@@ -119,7 +130,7 @@ private struct NursingEventDetails: View {
     }
     
     var body: some View {
-        Text("Nursed at \(formattedDate) for **\(duration)**")
+        Text("Nursed from \(breastText) at \(formattedDate) for **\(duration)**")
     }
 }
 
@@ -156,7 +167,8 @@ struct EventView_Previews: PreviewProvider {
         EventView(event: NursingEvent(
             context: Container.previewContainer().viewContext,
             start: Date.now,
-            end: Date.now.addingTimeInterval(1000)
+            end: Date.now.addingTimeInterval(1000),
+            breast: .left
         ))
         .previewDisplayName("Nursing event")
         

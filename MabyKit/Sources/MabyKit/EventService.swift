@@ -51,7 +51,8 @@ public class EventService {
     /// Adds a new nursing event to the database if the provided dates are valid.
     public func addNursing(
         start: Date,
-        end: Date
+        end: Date,
+        breast: NursingEvent.Breast
     ) -> Result<NursingEvent, AddError> {
         if start > end {
             return .failure(.invalidData)
@@ -60,7 +61,8 @@ public class EventService {
         let event = NursingEvent(
             context: database.container.viewContext,
             start: start,
-            end: end
+            end: end,
+            breast: breast
         )
         
         return save(event: event)

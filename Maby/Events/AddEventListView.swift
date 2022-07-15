@@ -6,7 +6,7 @@ private enum EventType {
 }
 
 struct AddEventListView: View {
-    @FetchRequest(fetchRequest: allBabies())
+    @FetchRequest(fetchRequest: allBabies)
     private var babies: FetchedResults<Baby>
     
     @State private var selectedType: EventType? = nil
@@ -28,26 +28,25 @@ struct AddEventListView: View {
             set: { _, _ in selectedType = nil }
         )
         
-        return VStack(alignment: .leading) {
+        return List {
             BabyCard(baby: babies.first!)
+                .clearBackground()
             
-            List {
-                Section("Feeding") {
-                    Button(action: { onSelect(type: .nursing) }) {
-                        Text("🍼 Add nursing")
-                    }
+            Section("Feeding") {
+                Button(action: { onSelect(type: .nursing) }) {
+                    Text("🍼 Add nursing")
                 }
-                
-                Section("Hygiene") {
-                    Button(action: { onSelect(type: .diaper) }) {
-                        Text("🧷 Add diaper change")
-                    }
+            }
+            
+            Section("Hygiene") {
+                Button(action: { onSelect(type: .diaper) }) {
+                    Text("🧷 Add diaper change")
                 }
-                
-                Section("Health") {
-                    Button(action: { onSelect(type: .sleep) }) {
-                        Text("🌝 Add sleep")
-                    }
+            }
+            
+            Section("Health") {
+                Button(action: { onSelect(type: .sleep) }) {
+                    Text("🌝 Add sleep")
                 }
             }
         }

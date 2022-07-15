@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "query",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lightyear/Query",
+      "state" : {
+        "revision" : "2314c5dfd61c3a7a25289cc023ee8e0153bfc9d3",
+        "version" : "1.1.0"
+      }
+    },
+    {
       "identity" : "swift-log",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log.git",

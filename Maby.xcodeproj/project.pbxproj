@@ -16,6 +16,7 @@
 		C9B95D12287DA9D000ADC43F /* AddBabyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D11287DA9D000ADC43F /* AddBabyView.swift */; };
 		C9B95D14287DAD9C00ADC43F /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D13287DAD9C00ADC43F /* ButtonStyles.swift */; };
 		C9B95D16287DF50D00ADC43F /* BabyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D15287DF50D00ADC43F /* BabyCard.swift */; };
+		C9D2C0832880D1DC00F85D8F /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D2C0822880D1DC00F85D8F /* EventView.swift */; };
 		C9ED2EA2287C745100BA3228 /* MabyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EA1287C745100BA3228 /* MabyApp.swift */; };
 		C9ED2EA9287C745100BA3228 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EA8287C745100BA3228 /* ContentView.swift */; };
 		C9ED2EAB287C745300BA3228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9ED2EAA287C745300BA3228 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		C9B95D11287DA9D000ADC43F /* AddBabyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBabyView.swift; sourceTree = "<group>"; };
 		C9B95D13287DAD9C00ADC43F /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		C9B95D15287DF50D00ADC43F /* BabyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyCard.swift; sourceTree = "<group>"; };
+		C9D2C0822880D1DC00F85D8F /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		C9ED2E9E287C745100BA3228 /* Maby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9ED2EA1287C745100BA3228 /* MabyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MabyApp.swift; sourceTree = "<group>"; };
 		C9ED2EA8287C745100BA3228 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				C953DD40287F011B00F1E1B7 /* AddDiaperEventView.swift */,
 				C953DD42287F206400F1E1B7 /* AddNursingEventView.swift */,
 				C953DD44287F253800F1E1B7 /* AddSleepEventView.swift */,
+				C9D2C0822880D1DC00F85D8F /* EventView.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				C953DD43287F206400F1E1B7 /* AddNursingEventView.swift in Sources */,
 				C9B95D12287DA9D000ADC43F /* AddBabyView.swift in Sources */,
 				C9B95D16287DF50D00ADC43F /* BabyCard.swift in Sources */,
+				C9D2C0832880D1DC00F85D8F /* EventView.swift in Sources */,
 				C9ED2EA2287C745100BA3228 /* MabyApp.swift in Sources */,
 				C953DD41287F011B00F1E1B7 /* AddDiaperEventView.swift in Sources */,
 				C953DD3D287E0C0700F1E1B7 /* AddEventListView.swift in Sources */,

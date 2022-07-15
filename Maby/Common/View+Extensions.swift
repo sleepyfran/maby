@@ -14,13 +14,13 @@ extension View {
     /// Adds all the mocked dependencies to a view. Use ONLY on previews.
     public func mockedDependencies(empty: Bool = false) -> some View {
         #if DEBUG
+        let viewContext =
+            empty
+             ? Container.emptyPreviewContainer().viewContext
+             : Container.previewContainer().viewContext
+        
         return self
-            .environment(
-                \.managedObjectContext,
-                empty
-                 ? Container.emptyPreviewContainer().viewContext
-                 : Container.previewContainer().viewContext
-            )
+            .environment(\.managedObjectContext, viewContext)
         #else
         return self
         #endif

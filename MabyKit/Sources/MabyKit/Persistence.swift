@@ -21,6 +21,19 @@ public struct PersistenceController {
             gender: Baby.Gender.girl
         )
         
+        let nursingEvent = NursingEvent(
+            context: viewContext,
+            start: Date.now,
+            end: Calendar.current.date(byAdding: .minute, value: 24, to: Date.now)!
+        )
+        
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!
+        let sleepEvent = SleepEvent(
+            context: viewContext,
+            start: tomorrow,
+            end: Calendar.current.date(byAdding: .hour, value: 2, to: tomorrow)!
+        )
+        
         do {
             try viewContext.save()
         } catch {

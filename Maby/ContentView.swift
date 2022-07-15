@@ -4,25 +4,23 @@ import MabyKit
 import SwiftUI
 
 struct ContentView: View {
-    @FetchRequest(fetchRequest: allBabies())
+    @FetchRequest(fetchRequest: allBabies)
     private var babies: FetchedResults<Baby>
     
     @State private var showingAddBaby = false
     
     var body: some View {
-        VStack {
+        TabView {
             if !babies.isEmpty {
-                TabView {
-                    AddEventListView()
-                        .tabItem {
-                            Label("Add event", systemImage: "plus")
-                        }
-                    
-                    JournalView()
-                        .tabItem {
-                            Label("Journal", systemImage: "book")
-                        }
-                }
+                AddEventListView()
+                    .tabItem {
+                        Label("Add event", systemImage: "plus.circle")
+                    }
+                
+                JournalView()
+                    .tabItem {
+                        Label("Journal", systemImage: "book")
+                    }
             }
         }
         .sheet(isPresented: $showingAddBaby) {

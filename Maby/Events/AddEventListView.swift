@@ -58,20 +58,16 @@ struct AddEventListView: View {
             switch selectedType! {
             case .diaper:
                 AddDiaperEventView()
-                    .presentationDetents([.medium])
-                    .presentationDragIndicator(.visible)
+                    .sheetSize(.medium)
             case .nursing:
                 AddNursingEventView()
-                    .presentationDetents([.height(450)])
-                    .presentationDragIndicator(.visible)
+                    .sheetSize(.height(450))
             case .sleep:
                 AddSleepEventView()
-                    .presentationDetents([.medium])
-                    .presentationDragIndicator(.visible)
+                    .sheetSize(.medium)
             case .vomit:
                 AddVomitEventView()
-                    .presentationDetents([.medium])
-                    .presentationDragIndicator(.visible)
+                    .sheetSize(.medium)
             }
         }
     }

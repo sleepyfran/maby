@@ -1,18 +1,33 @@
+import MabyKit
 import SwiftUI
 
-struct AddEventView<Content: View>: View {
+struct AddEventView<Content: View, E: Event>: View {
+    @Environment(\.dismiss) private var dismiss
+    
     let title: LocalizedStringKey
     let form: Content
-    let onAdd: () -> Void
+    let onAdd: () -> Result<E, AddError>
     
     init(
         _ title: LocalizedStringKey,
-        onAdd: @escaping () -> Void,
+        onAdd: @escaping () -> Result<E, AddError>,
         @ViewBuilder form: () -> Content
     ) {
         self.title = title
         self.form = form()
         self.onAdd = onAdd
+    }
+    
+    private func addAndDismiss() {
+        let result = onAdd()
+        
+        switch result {
+        case .success(_):
+            dismiss()
+            return
+        case .failure(_):
+            return
+        }
     }
     
     var body: some View {
@@ -26,7 +41,7 @@ struct AddEventView<Content: View>: View {
             form
             
             Section {
-                Button(action: onAdd) {
+                Button(action: addAndDismiss) {
                     Text("Add")
                 }
                 .buttonStyle(.primaryAction)
@@ -38,7 +53,10 @@ struct AddEventView<Content: View>: View {
 
 struct AddEventView_Previews: PreviewProvider {
     static var previews: some View {
-        AddEventView("🧷 Diaper change", onAdd: { }) {
+        AddEventView(
+            "🧷 Diaper change",
+            onAdd: { .failure(.databaseError) }
+        ) {
             Text("Hello?")
         }
     }

@@ -3,27 +3,18 @@ import MabyKit
 import SwiftUI
 
 struct AddDiaperEventView: View {
-    @Environment(\.dismiss) private var dismiss
-    
     @Injected(Container.eventService) private var eventService
     
     @State private var date = Date.now
     @State private var diaperType = DiaperEvent.DiaperType.wet
     
-    private func onAdd() {
-        let result = eventService.addDiaperChange(date: date, type: diaperType)
-        
-        switch(result) {
-        case .success(_):
-            dismiss()
-            return
-        case .failure(_):
-            return
-        }
-    }
-    
     var body: some View {
-        AddEventView("🧷 Diaper change", onAdd: onAdd) {
+        AddEventView(
+            "🧷 Diaper change",
+            onAdd: {
+                eventService.addDiaperChange(date: date, type: diaperType)
+            }
+        ) {
             Section() {
                 DatePicker("Date", selection: $date)
                 

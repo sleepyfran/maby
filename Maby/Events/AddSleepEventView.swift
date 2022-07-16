@@ -3,27 +3,16 @@ import MabyKit
 import SwiftUI
 
 struct AddSleepEventView: View {
-    @Environment(\.dismiss) private var dismiss
-    
     @Injected(Container.eventService) private var eventService
     
     @State private var startDate = Date.now
     @State private var endDate = Date.now
     
-    private func onAdd() {
-        let result = eventService.addSleep(start: startDate, end: endDate)
-
-        switch(result) {
-        case .success(_):
-            dismiss()
-            return
-        case .failure(_):
-            return
-        }
-    }
-    
     var body: some View {
-        AddEventView("🌝 Sleep", onAdd: onAdd) {
+        AddEventView(
+            "🌝 Sleep",
+            onAdd: { eventService.addSleep(start: startDate, end: endDate) }
+        ) {
             Section("Time") {
                 DatePicker(
                     "Start",

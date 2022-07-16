@@ -3,32 +3,23 @@ import MabyKit
 import SwiftUI
 
 struct AddNursingEventView: View {
-    @Environment(\.dismiss) private var dismiss
-    
     @Injected(Container.eventService) private var eventService
     
     @State private var startDate = Date.now
     @State private var endDate = Date.now
     @State private var breast = NursingEvent.Breast.left
     
-    private func onAdd() {
-        let result = eventService.addNursing(
-            start: startDate,
-            end: endDate,
-            breast: breast
-        )
-
-        switch(result) {
-        case .success(_):
-            dismiss()
-            return
-        case .failure(_):
-            return
-        }
-    }
-    
     var body: some View {
-        AddEventView("🍼 Nursing", onAdd: onAdd) {
+        AddEventView(
+            "🍼 Nursing",
+            onAdd: {
+                eventService.addNursing(
+                    start: startDate,
+                    end: endDate,
+                    breast: breast
+                )
+            }
+        ) {
             Section("Time") {
                 DatePicker(
                     "Start",

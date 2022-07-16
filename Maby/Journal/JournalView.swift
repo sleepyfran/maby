@@ -16,11 +16,6 @@ struct JournalView: View {
         ]
     ) private var events: SectionedFetchResults<Date, Event>
     
-    private func delete(from events: [Event], offsets: IndexSet) {
-        let itemsToDelete = offsets.map { events[$0] }
-        eventService.delete(events: itemsToDelete)
-    }
-    
     var body: some View {
         List {
             BabyCard(baby: babies.first!)
@@ -32,7 +27,7 @@ struct JournalView: View {
                         EventView(event: event)
                     }
                     .onDelete { indexSet in
-                        delete(from: Array(section), offsets: indexSet)
+                        eventService.delete(events: indexSet.map { section[$0] })
                     }
                 }
             }

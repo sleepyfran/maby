@@ -1,10 +1,6 @@
 import MabyKit
 import SwiftUI
 
-private enum EventType {
-    case nursing, diaper, sleep, vomit
-}
-
 struct AddEventListView: View {
     @FetchRequest(fetchRequest: allBabies)
     private var babies: FetchedResults<Baby>

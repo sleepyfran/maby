@@ -5,7 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "MabyKit",
-    platforms: [.iOS(.v15)],
+    platforms: [
+        .iOS(.v15),
+        .watchOS(.v8)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -16,8 +19,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/hmlongco/Factory", from: "1.2.4"),
-        .package(url: "https://github.com/apple/swift-log.git", from: "1.0.0"),
-        .package(url: "https://github.com/lightyear/Query", from: "1.0.0")
+        .package(url: "https://github.com/apple/swift-log.git", from: "1.0.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -26,7 +28,6 @@ let package = Package(
             name: "MabyKit",
             dependencies: [
                 "Factory",
-                "Query",
                 .product(name: "Logging", package: "swift-log")
             ],
             resources: [.process("Resources")]),

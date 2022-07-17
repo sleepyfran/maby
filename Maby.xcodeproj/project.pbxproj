@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C938D90928844CE40041A3FA /* AddEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90828844CE40041A3FA /* AddEventListView.swift */; };
+		C938D90D28844F0A0041A3FA /* AddNursingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90C28844F0A0041A3FA /* AddNursingEventView.swift */; };
+		C938D90F288454440041A3FA /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = C938D90E288454440041A3FA /* Factory */; };
 		C953DD3D287E0C0700F1E1B7 /* AddEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C953DD3C287E0C0700F1E1B7 /* AddEventListView.swift */; };
 		C953DD41287F011B00F1E1B7 /* AddDiaperEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C953DD40287F011B00F1E1B7 /* AddDiaperEventView.swift */; };
 		C953DD43287F206400F1E1B7 /* AddNursingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C953DD42287F206400F1E1B7 /* AddNursingEventView.swift */; };
 		C953DD45287F253800F1E1B7 /* AddSleepEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C953DD44287F253800F1E1B7 /* AddSleepEventView.swift */; };
 		C969734B2881B0FA00156287 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969734A2881B0FA00156287 /* AddEventView.swift */; };
 		C969734D2881EF4400156287 /* AddVomitEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969734C2881EF4400156287 /* AddVomitEventView.swift */; };
+		C9A78ACD2884387D00753D58 /* MabyWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78ACC2884387D00753D58 /* MabyWatchApp.swift */; };
+		C9A78ACF2884387D00753D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A78ACE2884387D00753D58 /* ContentView.swift */; };
+		C9A78AD12884387F00753D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9A78AD02884387F00753D58 /* Assets.xcassets */; };
+		C9A78AD42884387F00753D58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9A78AD32884387F00753D58 /* Preview Assets.xcassets */; };
+		C9A78AD928843D7F00753D58 /* MabyKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9A78AD828843D7F00753D58 /* MabyKit */; };
 		C9B95D09287CA02400ADC43F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D08287CA02400ADC43F /* View+Extensions.swift */; };
 		C9B95D0D287DA6C800ADC43F /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D0C287DA6C800ADC43F /* JournalView.swift */; };
 		C9B95D12287DA9D000ADC43F /* AddBabyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B95D11287DA9D000ADC43F /* AddBabyView.swift */; };
@@ -28,12 +36,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C938D90828844CE40041A3FA /* AddEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventListView.swift; sourceTree = "<group>"; };
+		C938D90C28844F0A0041A3FA /* AddNursingEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNursingEventView.swift; sourceTree = "<group>"; };
 		C953DD3C287E0C0700F1E1B7 /* AddEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventListView.swift; sourceTree = "<group>"; };
 		C953DD40287F011B00F1E1B7 /* AddDiaperEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaperEventView.swift; sourceTree = "<group>"; };
 		C953DD42287F206400F1E1B7 /* AddNursingEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNursingEventView.swift; sourceTree = "<group>"; };
 		C953DD44287F253800F1E1B7 /* AddSleepEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSleepEventView.swift; sourceTree = "<group>"; };
 		C969734A2881B0FA00156287 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		C969734C2881EF4400156287 /* AddVomitEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVomitEventView.swift; sourceTree = "<group>"; };
+		C9A78ACA2884387D00753D58 /* Maby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A78ACC2884387D00753D58 /* MabyWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MabyWatchApp.swift; sourceTree = "<group>"; };
+		C9A78ACE2884387D00753D58 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C9A78AD02884387F00753D58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9A78AD32884387F00753D58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9B95D08287CA02400ADC43F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		C9B95D0C287DA6C800ADC43F /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		C9B95D11287DA9D000ADC43F /* AddBabyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBabyView.swift; sourceTree = "<group>"; };
@@ -50,6 +65,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C9A78AC72884387D00753D58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A78AD928843D7F00753D58 /* MabyKit in Frameworks */,
+				C938D90F288454440041A3FA /* Factory in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9ED2E9B287C745100BA3228 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C938D90A28844CEA0041A3FA /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				C938D90828844CE40041A3FA /* AddEventListView.swift */,
+				C938D90C28844F0A0041A3FA /* AddNursingEventView.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		C953DD39287E0B3E00F1E1B7 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +107,26 @@
 				C969734C2881EF4400156287 /* AddVomitEventView.swift */,
 			);
 			path = Events;
+			sourceTree = "<group>";
+		};
+		C9A78ACB2884387D00753D58 /* MabyWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				C938D90A28844CEA0041A3FA /* Events */,
+				C9A78ACC2884387D00753D58 /* MabyWatchApp.swift */,
+				C9A78ACE2884387D00753D58 /* ContentView.swift */,
+				C9A78AD02884387F00753D58 /* Assets.xcassets */,
+				C9A78AD22884387F00753D58 /* Preview Content */,
+			);
+			path = "MabyWatch Watch App";
+			sourceTree = "<group>";
+		};
+		C9A78AD22884387F00753D58 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C9A78AD32884387F00753D58 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		C9B95D07287CA01800ADC43F /* Common */ = {
@@ -107,6 +160,7 @@
 			children = (
 				C9ED2ED2287C971600BA3228 /* MabyKit */,
 				C9ED2EA0287C745100BA3228 /* Maby */,
+				C9A78ACB2884387D00753D58 /* MabyWatch Watch App */,
 				C9ED2E9F287C745100BA3228 /* Products */,
 				C9ED2ED3287C98C000BA3228 /* Frameworks */,
 			);
@@ -116,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				C9ED2E9E287C745100BA3228 /* Maby.app */,
+				C9A78ACA2884387D00753D58 /* Maby.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +209,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C9A78AC92884387D00753D58 /* MabyWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9A78AD52884387F00753D58 /* Build configuration list for PBXNativeTarget "MabyWatch Watch App" */;
+			buildPhases = (
+				C9A78AC62884387D00753D58 /* Sources */,
+				C9A78AC72884387D00753D58 /* Frameworks */,
+				C9A78AC82884387D00753D58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MabyWatch Watch App";
+			packageProductDependencies = (
+				C9A78AD828843D7F00753D58 /* MabyKit */,
+				C938D90E288454440041A3FA /* Factory */,
+			);
+			productName = "MabyWatch Watch App";
+			productReference = C9A78ACA2884387D00753D58 /* Maby.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C9ED2E9D287C745100BA3228 /* Maby */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9ED2EC8287C745300BA3228 /* Build configuration list for PBXNativeTarget "Maby" */;
@@ -185,6 +261,9 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					C9A78AC92884387D00753D58 = {
+						CreatedOnToolsVersion = 14.0;
+					};
 					C9ED2E9D287C745100BA3228 = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -207,11 +286,21 @@
 			projectRoot = "";
 			targets = (
 				C9ED2E9D287C745100BA3228 /* Maby */,
+				C9A78AC92884387D00753D58 /* MabyWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C9A78AC82884387D00753D58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9A78AD42884387F00753D58 /* Preview Assets.xcassets in Resources */,
+				C9A78AD12884387F00753D58 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9ED2E9C287C745100BA3228 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,6 +313,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C9A78AC62884387D00753D58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C938D90D28844F0A0041A3FA /* AddNursingEventView.swift in Sources */,
+				C9A78ACF2884387D00753D58 /* ContentView.swift in Sources */,
+				C9A78ACD2884387D00753D58 /* MabyWatchApp.swift in Sources */,
+				C938D90928844CE40041A3FA /* AddEventListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9ED2E9A287C745100BA3228 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,6 +348,67 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		C9A78AD62884387F00753D58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MabyWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 399Y562TGG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = Maby;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		C9A78AD72884387F00753D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MabyWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 399Y562TGG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = Maby;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
 		C9ED2EC6287C745300BA3228 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -430,6 +591,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C9A78AD52884387F00753D58 /* Build configuration list for PBXNativeTarget "MabyWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9A78AD62884387F00753D58 /* Debug */,
+				C9A78AD72884387F00753D58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C9ED2E99287C745100BA3228 /* Build configuration list for PBXProject "Maby" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -462,6 +632,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C938D90E288454440041A3FA /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9ED2ED9287C995300BA3228 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		C9A78AD828843D7F00753D58 /* MabyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MabyKit;
+		};
 		C9ED2ED4287C98C000BA3228 /* MabyKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MabyKit;

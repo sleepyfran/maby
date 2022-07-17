@@ -23,29 +23,9 @@
 		C9ED2EA9287C745100BA3228 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EA8287C745100BA3228 /* ContentView.swift */; };
 		C9ED2EAB287C745300BA3228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9ED2EAA287C745300BA3228 /* Assets.xcassets */; };
 		C9ED2EAF287C745300BA3228 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9ED2EAE287C745300BA3228 /* Preview Assets.xcassets */; };
-		C9ED2EB9287C745300BA3228 /* MabyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EB8287C745300BA3228 /* MabyTests.swift */; };
-		C9ED2EC3287C745300BA3228 /* MabyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EC2287C745300BA3228 /* MabyUITests.swift */; };
-		C9ED2EC5287C745300BA3228 /* MabyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED2EC4287C745300BA3228 /* MabyUITestsLaunchTests.swift */; };
 		C9ED2ED5287C98C000BA3228 /* MabyKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9ED2ED4287C98C000BA3228 /* MabyKit */; };
 		C9ED2EDB287C995300BA3228 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = C9ED2EDA287C995300BA3228 /* Factory */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C9ED2EB5287C745300BA3228 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9ED2E96287C745100BA3228 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9ED2E9D287C745100BA3228;
-			remoteInfo = Maby;
-		};
-		C9ED2EBF287C745300BA3228 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9ED2E96287C745100BA3228 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9ED2E9D287C745100BA3228;
-			remoteInfo = Maby;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C953DD3C287E0C0700F1E1B7 /* AddEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventListView.swift; sourceTree = "<group>"; };
@@ -66,11 +46,6 @@
 		C9ED2EAA287C745300BA3228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9ED2EAC287C745300BA3228 /* Maby.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Maby.entitlements; sourceTree = "<group>"; };
 		C9ED2EAE287C745300BA3228 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C9ED2EB4287C745300BA3228 /* MabyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MabyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9ED2EB8287C745300BA3228 /* MabyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MabyTests.swift; sourceTree = "<group>"; };
-		C9ED2EBE287C745300BA3228 /* MabyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MabyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9ED2EC2287C745300BA3228 /* MabyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MabyUITests.swift; sourceTree = "<group>"; };
-		C9ED2EC4287C745300BA3228 /* MabyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MabyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C9ED2ED2287C971600BA3228 /* MabyKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MabyKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,20 +56,6 @@
 			files = (
 				C9ED2ED5287C98C000BA3228 /* MabyKit in Frameworks */,
 				C9ED2EDB287C995300BA3228 /* Factory in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9ED2EB1287C745300BA3228 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9ED2EBB287C745300BA3228 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +107,6 @@
 			children = (
 				C9ED2ED2287C971600BA3228 /* MabyKit */,
 				C9ED2EA0287C745100BA3228 /* Maby */,
-				C9ED2EB7287C745300BA3228 /* MabyTests */,
-				C9ED2EC1287C745300BA3228 /* MabyUITests */,
 				C9ED2E9F287C745100BA3228 /* Products */,
 				C9ED2ED3287C98C000BA3228 /* Frameworks */,
 			);
@@ -157,8 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				C9ED2E9E287C745100BA3228 /* Maby.app */,
-				C9ED2EB4287C745300BA3228 /* MabyTests.xctest */,
-				C9ED2EBE287C745300BA3228 /* MabyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,23 +142,6 @@
 				C9ED2EAE287C745300BA3228 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		C9ED2EB7287C745300BA3228 /* MabyTests */ = {
-			isa = PBXGroup;
-			children = (
-				C9ED2EB8287C745300BA3228 /* MabyTests.swift */,
-			);
-			path = MabyTests;
-			sourceTree = "<group>";
-		};
-		C9ED2EC1287C745300BA3228 /* MabyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C9ED2EC2287C745300BA3228 /* MabyUITests.swift */,
-				C9ED2EC4287C745300BA3228 /* MabyUITestsLaunchTests.swift */,
-			);
-			path = MabyUITests;
 			sourceTree = "<group>";
 		};
 		C9ED2ED3287C98C000BA3228 /* Frameworks */ = {
@@ -235,42 +175,6 @@
 			productReference = C9ED2E9E287C745100BA3228 /* Maby.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C9ED2EB3287C745300BA3228 /* MabyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9ED2ECB287C745300BA3228 /* Build configuration list for PBXNativeTarget "MabyTests" */;
-			buildPhases = (
-				C9ED2EB0287C745300BA3228 /* Sources */,
-				C9ED2EB1287C745300BA3228 /* Frameworks */,
-				C9ED2EB2287C745300BA3228 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C9ED2EB6287C745300BA3228 /* PBXTargetDependency */,
-			);
-			name = MabyTests;
-			productName = MabyTests;
-			productReference = C9ED2EB4287C745300BA3228 /* MabyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C9ED2EBD287C745300BA3228 /* MabyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9ED2ECE287C745300BA3228 /* Build configuration list for PBXNativeTarget "MabyUITests" */;
-			buildPhases = (
-				C9ED2EBA287C745300BA3228 /* Sources */,
-				C9ED2EBB287C745300BA3228 /* Frameworks */,
-				C9ED2EBC287C745300BA3228 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C9ED2EC0287C745300BA3228 /* PBXTargetDependency */,
-			);
-			name = MabyUITests;
-			productName = MabyUITests;
-			productReference = C9ED2EBE287C745300BA3228 /* MabyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,14 +187,6 @@
 				TargetAttributes = {
 					C9ED2E9D287C745100BA3228 = {
 						CreatedOnToolsVersion = 14.0;
-					};
-					C9ED2EB3287C745300BA3228 = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = C9ED2E9D287C745100BA3228;
-					};
-					C9ED2EBD287C745300BA3228 = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = C9ED2E9D287C745100BA3228;
 					};
 				};
 			};
@@ -311,8 +207,6 @@
 			projectRoot = "";
 			targets = (
 				C9ED2E9D287C745100BA3228 /* Maby */,
-				C9ED2EB3287C745300BA3228 /* MabyTests */,
-				C9ED2EBD287C745300BA3228 /* MabyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -324,20 +218,6 @@
 			files = (
 				C9ED2EAF287C745300BA3228 /* Preview Assets.xcassets in Resources */,
 				C9ED2EAB287C745300BA3228 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9ED2EB2287C745300BA3228 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9ED2EBC287C745300BA3228 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,37 +245,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9ED2EB0287C745300BA3228 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9ED2EB9287C745300BA3228 /* MabyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9ED2EBA287C745300BA3228 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9ED2EC3287C745300BA3228 /* MabyUITests.swift in Sources */,
-				C9ED2EC5287C745300BA3228 /* MabyUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C9ED2EB6287C745300BA3228 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9ED2E9D287C745100BA3228 /* Maby */;
-			targetProxy = C9ED2EB5287C745300BA3228 /* PBXContainerItemProxy */;
-		};
-		C9ED2EC0287C745300BA3228 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9ED2E9D287C745100BA3228 /* Maby */;
-			targetProxy = C9ED2EBF287C745300BA3228 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C9ED2EC6287C745300BA3228 /* Debug */ = {
@@ -577,96 +427,6 @@
 			};
 			name = Release;
 		};
-		C9ED2ECC287C745300BA3228 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 399Y562TGG;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.MabyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maby.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Maby";
-			};
-			name = Debug;
-		};
-		C9ED2ECD287C745300BA3228 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 399Y562TGG;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.MabyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maby.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Maby";
-			};
-			name = Release;
-		};
-		C9ED2ECF287C745300BA3228 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 399Y562TGG;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.MabyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Maby;
-			};
-			name = Debug;
-		};
-		C9ED2ED0287C745300BA3228 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 399Y562TGG;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.MabyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Maby;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -684,24 +444,6 @@
 			buildConfigurations = (
 				C9ED2EC9287C745300BA3228 /* Debug */,
 				C9ED2ECA287C745300BA3228 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9ED2ECB287C745300BA3228 /* Build configuration list for PBXNativeTarget "MabyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9ED2ECC287C745300BA3228 /* Debug */,
-				C9ED2ECD287C745300BA3228 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9ED2ECE287C745300BA3228 /* Build configuration list for PBXNativeTarget "MabyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9ED2ECF287C745300BA3228 /* Debug */,
-				C9ED2ED0287C745300BA3228 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

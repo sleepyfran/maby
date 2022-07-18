@@ -18,7 +18,7 @@ struct AddEventListView: View {
                 }
                 
                 Section("Health") {
-                    Button(action: { }) {
+                    NavigationLink(destination: AddSleepEventView()) {
                         Text("🌝 Sleep")
                     }
                     

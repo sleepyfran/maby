@@ -106,6 +106,17 @@ public class EventService {
         return save(event: event)
     }
     
+    public func addSleep(duration: Double) -> Result<SleepEvent, AddError> {
+        let end = Date.now
+        let start = Calendar.current.date(
+            byAdding: .hour,
+            value: Int(duration.rounded(.up)) * -1,
+            to: end
+        )!
+        
+        return addSleep(start: start, end: end)
+    }
+    
     /// Adds a new diaper change event to the database.
     public func addVomit(
         date: Date,

@@ -11,6 +11,7 @@
 		C901566C2884DF5500DAC7E7 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901566B2884DF5500DAC7E7 /* AddEventView.swift */; };
 		C901566E2884E38000DAC7E7 /* AddSleepEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901566D2884E37F00DAC7E7 /* AddSleepEventView.swift */; };
 		C90156702884E4B500DAC7E7 /* AddVomitEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901566F2884E4B500DAC7E7 /* AddVomitEventView.swift */; };
+		C90156A72885BE8600DAC7E7 /* Maby.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C9A78ACA2884387D00753D58 /* Maby.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C938D90928844CE40041A3FA /* AddEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90828844CE40041A3FA /* AddEventListView.swift */; };
 		C938D90D28844F0A0041A3FA /* AddNursingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90C28844F0A0041A3FA /* AddNursingEventView.swift */; };
 		C938D90F288454440041A3FA /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = C938D90E288454440041A3FA /* Factory */; };
@@ -38,6 +39,30 @@
 		C9ED2ED5287C98C000BA3228 /* MabyKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9ED2ED4287C98C000BA3228 /* MabyKit */; };
 		C9ED2EDB287C995300BA3228 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = C9ED2EDA287C995300BA3228 /* Factory */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C90156A82885BE8600DAC7E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9ED2E96287C745100BA3228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9A78AC92884387D00753D58;
+			remoteInfo = "MabyWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C90156AA2885BE8600DAC7E7 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C90156A72885BE8600DAC7E7 /* Maby.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C90156692884DF1000DAC7E7 /* AddDiaperEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaperEventView.swift; sourceTree = "<group>"; };
@@ -255,10 +280,12 @@
 				C9ED2E9A287C745100BA3228 /* Sources */,
 				C9ED2E9B287C745100BA3228 /* Frameworks */,
 				C9ED2E9C287C745100BA3228 /* Resources */,
+				C90156AA2885BE8600DAC7E7 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C90156A92885BE8600DAC7E7 /* PBXTargetDependency */,
 			);
 			name = Maby;
 			packageProductDependencies = (
@@ -369,6 +396,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C90156A92885BE8600DAC7E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9A78AC92884387D00753D58 /* MabyWatch Watch App */;
+			targetProxy = C90156A82885BE8600DAC7E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		C9A78AD62884387F00753D58 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -378,7 +413,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = "MabyWatch Watch App/MabyWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MabyWatch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 399Y562TGG;
 				ENABLE_PREVIEWS = YES;
@@ -390,7 +425,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.Maby.watchkitapp;
 				PRODUCT_NAME = Maby;
 				SDKROOT = watchos;
@@ -410,7 +445,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = "MabyWatch Watch App/MabyWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MabyWatch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 399Y562TGG;
 				ENABLE_PREVIEWS = YES;
@@ -422,7 +457,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.Maby.watchkitapp;
 				PRODUCT_NAME = Maby;
 				SDKROOT = watchos;
@@ -551,7 +586,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Maby/Maby.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Maby/Preview Content\"";
 				DEVELOPMENT_TEAM = 399Y562TGG;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -567,7 +602,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.Maby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -587,7 +622,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Maby/Maby.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Maby/Preview Content\"";
 				DEVELOPMENT_TEAM = 399Y562TGG;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -603,7 +638,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.Maby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;

@@ -24,19 +24,10 @@ struct AddNursingEventView: View {
         }
     }
     
-    private func onAdd() {
-        let result = eventService.addNursing(duration: duration, breast: breast)
-        switch result {
-        case .success(_):
-            dismiss()
-            return
-        case .failure(_):
-            return
-        }
-    }
-    
     var body: some View {
-        Form {
+        AddEventView(action: {
+            eventService.addNursing(duration: duration, breast: breast)
+        }) {
             Section("Duration") {
                 VStack(alignment: .leading) {
                     Text("\(formattedDuration) minutes")
@@ -54,12 +45,6 @@ struct AddNursingEventView: View {
                 Text("Both").tag(NursingEvent.Breast.both)
             }
             .pickerStyle(.inline)
-            
-            Button(action: onAdd) {
-                Text("Add")
-            }
-            .buttonStyle(.borderedProminent)
-            .listRowBackground(Color.clear)
         }
         .navigationTitle("🍼 Nursing")
     }

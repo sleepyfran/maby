@@ -48,6 +48,12 @@ public class EventService {
         return save(event: event)
     }
     
+    public func addDiaperChange(
+        type: DiaperEvent.DiaperType
+    ) -> Result<DiaperEvent, AddError> {
+        return addDiaperChange(date: Date.now, type: type)
+    }
+    
     /// Adds a new nursing event to the database if the provided dates are valid.
     public func addNursing(
         start: Date,

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C901566A2884DF1000DAC7E7 /* AddDiaperEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90156692884DF1000DAC7E7 /* AddDiaperEventView.swift */; };
+		C901566C2884DF5500DAC7E7 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901566B2884DF5500DAC7E7 /* AddEventView.swift */; };
 		C938D90928844CE40041A3FA /* AddEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90828844CE40041A3FA /* AddEventListView.swift */; };
 		C938D90D28844F0A0041A3FA /* AddNursingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90C28844F0A0041A3FA /* AddNursingEventView.swift */; };
 		C938D90F288454440041A3FA /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = C938D90E288454440041A3FA /* Factory */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C90156692884DF1000DAC7E7 /* AddDiaperEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaperEventView.swift; sourceTree = "<group>"; };
+		C901566B2884DF5500DAC7E7 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		C91DF4B02884D6110014F602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C91DF4B12884D6360014F602 /* MabyWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MabyWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		C91DF4B22884D6560014F602 /* MabyWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MabyWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -94,6 +98,8 @@
 			children = (
 				C938D90828844CE40041A3FA /* AddEventListView.swift */,
 				C938D90C28844F0A0041A3FA /* AddNursingEventView.swift */,
+				C90156692884DF1000DAC7E7 /* AddDiaperEventView.swift */,
+				C901566B2884DF5500DAC7E7 /* AddEventView.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -324,7 +330,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C938D90D28844F0A0041A3FA /* AddNursingEventView.swift in Sources */,
+				C901566C2884DF5500DAC7E7 /* AddEventView.swift in Sources */,
 				C9A78ACF2884387D00753D58 /* ContentView.swift in Sources */,
+				C901566A2884DF1000DAC7E7 /* AddDiaperEventView.swift in Sources */,
 				C9A78ACD2884387D00753D58 /* MabyWatchApp.swift in Sources */,
 				C938D90928844CE40041A3FA /* AddEventListView.swift in Sources */,
 			);

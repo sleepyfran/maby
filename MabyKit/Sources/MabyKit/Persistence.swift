@@ -79,6 +79,7 @@ public struct PersistenceController {
             }
         })
         
+        container.viewContext.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
 }

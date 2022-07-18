@@ -130,4 +130,10 @@ public class EventService {
         
         return save(event: event)
     }
+    
+    public func addVomit(
+        quantity: VomitEvent.Quantity
+    ) -> Result<VomitEvent, AddError> {
+        return addVomit(date: Date.now, quantity: quantity)
+    }
 }

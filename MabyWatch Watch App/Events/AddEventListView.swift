@@ -22,7 +22,7 @@ struct AddEventListView: View {
                         Text("🌝 Sleep")
                     }
                     
-                    Button(action: { }) {
+                    NavigationLink(destination: AddVomitEventView()) {
                         Text("🤢 Vomit")
                     }
                 }

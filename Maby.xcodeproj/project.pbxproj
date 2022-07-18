@@ -10,6 +10,7 @@
 		C901566A2884DF1000DAC7E7 /* AddDiaperEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90156692884DF1000DAC7E7 /* AddDiaperEventView.swift */; };
 		C901566C2884DF5500DAC7E7 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901566B2884DF5500DAC7E7 /* AddEventView.swift */; };
 		C901566E2884E38000DAC7E7 /* AddSleepEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901566D2884E37F00DAC7E7 /* AddSleepEventView.swift */; };
+		C90156702884E4B500DAC7E7 /* AddVomitEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901566F2884E4B500DAC7E7 /* AddVomitEventView.swift */; };
 		C938D90928844CE40041A3FA /* AddEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90828844CE40041A3FA /* AddEventListView.swift */; };
 		C938D90D28844F0A0041A3FA /* AddNursingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90C28844F0A0041A3FA /* AddNursingEventView.swift */; };
 		C938D90F288454440041A3FA /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = C938D90E288454440041A3FA /* Factory */; };
@@ -42,6 +43,7 @@
 		C90156692884DF1000DAC7E7 /* AddDiaperEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaperEventView.swift; sourceTree = "<group>"; };
 		C901566B2884DF5500DAC7E7 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		C901566D2884E37F00DAC7E7 /* AddSleepEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSleepEventView.swift; sourceTree = "<group>"; };
+		C901566F2884E4B500DAC7E7 /* AddVomitEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVomitEventView.swift; sourceTree = "<group>"; };
 		C91DF4B02884D6110014F602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C91DF4B12884D6360014F602 /* MabyWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MabyWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		C91DF4B22884D6560014F602 /* MabyWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MabyWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -103,6 +105,7 @@
 				C90156692884DF1000DAC7E7 /* AddDiaperEventView.swift */,
 				C901566B2884DF5500DAC7E7 /* AddEventView.swift */,
 				C901566D2884E37F00DAC7E7 /* AddSleepEventView.swift */,
+				C901566F2884E4B500DAC7E7 /* AddVomitEventView.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				C901566A2884DF1000DAC7E7 /* AddDiaperEventView.swift in Sources */,
 				C9A78ACD2884387D00753D58 /* MabyWatchApp.swift in Sources */,
 				C938D90928844CE40041A3FA /* AddEventListView.swift in Sources */,
+				C90156702884E4B500DAC7E7 /* AddVomitEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

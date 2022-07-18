@@ -178,6 +178,7 @@ private struct VomitEventDetails: View {
     }
 }
 
+#if DEBUG
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
         EventView(event: DiaperEvent(
@@ -210,3 +211,4 @@ struct EventView_Previews: PreviewProvider {
         .previewDisplayName("Vomit event")
     }
 }
+#endif

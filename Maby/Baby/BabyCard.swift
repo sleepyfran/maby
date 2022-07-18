@@ -30,6 +30,7 @@ struct BabyCard: View {
     }
 }
 
+#if DEBUG
 struct BabyCard_Previews: PreviewProvider {
     static var previews: some View {
         BabyCard(baby: Baby(
@@ -44,3 +45,4 @@ struct BabyCard_Previews: PreviewProvider {
         ))
     }
 }
+#endif

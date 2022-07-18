@@ -16,23 +16,23 @@ struct AddNursingEventView: View {
     private var breastText: String {
         switch breast {
         case .left:
-            return "Left breast"
+            return "Left"
         case .right:
-            return "Right breast"
+            return "Right"
         case .both:
-            return "Both breasts"
+            return "Both"
         }
     }
     
     private func onAdd() {
-        let start = Date.now
-        let end = Calendar.current.date(
-            byAdding: .minute,
-            value: Int(duration.rounded(.up)),
-            to: start
-        )!
-        
-        // TODO: Call iOS app to add the data.
+        let result = eventService.addNursing(duration: duration, breast: breast)
+        switch result {
+        case .success(_):
+            dismiss()
+            return
+        case .failure(_):
+            return
+        }
     }
     
     var body: some View {

@@ -36,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C91DF4B02884D6110014F602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C91DF4B12884D6360014F602 /* MabyWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MabyWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		C91DF4B22884D6560014F602 /* MabyWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MabyWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C938D90828844CE40041A3FA /* AddEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventListView.swift; sourceTree = "<group>"; };
 		C938D90C28844F0A0041A3FA /* AddNursingEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNursingEventView.swift; sourceTree = "<group>"; };
 		C953DD3C287E0C0700F1E1B7 /* AddEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventListView.swift; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 		C9A78ACB2884387D00753D58 /* MabyWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				C91DF4B22884D6560014F602 /* MabyWatch-Watch-App-Info.plist */,
+				C91DF4B12884D6360014F602 /* MabyWatch Watch App.entitlements */,
 				C938D90A28844CEA0041A3FA /* Events */,
 				C9A78ACC2884387D00753D58 /* MabyWatchApp.swift */,
 				C9A78ACE2884387D00753D58 /* ContentView.swift */,
@@ -178,6 +183,7 @@
 		C9ED2EA0287C745100BA3228 /* Maby */ = {
 			isa = PBXGroup;
 			children = (
+				C91DF4B02884D6110014F602 /* Info.plist */,
 				C953DD39287E0B3E00F1E1B7 /* Events */,
 				C9B95D10287DA99A00ADC43F /* Baby */,
 				C9B95D0B287DA6BF00ADC43F /* Journal */,
@@ -354,20 +360,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = "MabyWatch Watch App/MabyWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MabyWatch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 399Y562TGG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MabyWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = io.sleepyfran.Maby;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.Maby.watchkitapp;
 				PRODUCT_NAME = Maby;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -384,20 +392,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = "MabyWatch Watch App/MabyWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MabyWatch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 399Y562TGG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MabyWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = io.sleepyfran.Maby;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sleepyfran.Maby.watchkitapp;
 				PRODUCT_NAME = Maby;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -531,6 +541,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Maby/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
@@ -566,6 +577,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Maby/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;

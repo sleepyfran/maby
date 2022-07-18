@@ -68,6 +68,20 @@ public class EventService {
         return save(event: event)
     }
     
+    public func addNursing(
+        duration: Double,
+        breast: NursingEvent.Breast
+    ) -> Result<NursingEvent, AddError> {
+        let end = Date.now
+        let start = Calendar.current.date(
+            byAdding: .minute,
+            value: Int(duration.rounded(.up)) * -1,
+            to: end
+        )!
+        
+        return addNursing(start: start, end: end, breast: breast)
+    }
+    
     /// Adds a new sleep event to the database if the provided dates are valid.
     public func addSleep(
         start: Date,

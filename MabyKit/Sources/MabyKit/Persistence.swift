@@ -55,7 +55,8 @@ public struct PersistenceController {
         else {
             fatalError("Failed to retrieve the object model")
         }
-        container = NSPersistentContainer(name: "Maby", managedObjectModel: objectModel)
+        
+        container = NSPersistentCloudKitContainer(name: "Maby", managedObjectModel: objectModel)
         
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")

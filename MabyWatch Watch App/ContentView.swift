@@ -1,9 +1,23 @@
+import CoreData
+import MabyKit
 import SwiftUI
 
 struct ContentView: View {
+    @FetchRequest(fetchRequest: allBabies)
+    private var babies: FetchedResults<Baby>
+    
     var body: some View {
         NavigationView {
-            AddEventListView()
+            if babies.isEmpty {
+                VStack(alignment: .leading) {
+                    Text("No data")
+                        .font(.title)
+                    
+                    Text("Add a baby in the iOS app first")
+                }
+            } else {
+                AddEventListView()
+            }
         }
     }
 }

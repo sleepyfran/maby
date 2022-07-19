@@ -46,7 +46,7 @@ struct AddEventListView: View {
                 }
                 
                 Button(action: { onSelect(type: .vomit) }) {
-                    Text("🤢 Vomit")
+                    Text("🤢 Add vomit")
                 }
             }
         }

@@ -1,13 +1,17 @@
 import MabyKit
 import SwiftUI
 
+private enum ButtonState {
+    case resting, loading, success, errored
+}
+
 struct AddEventView<Content: View, E: Event>: View {
     @Environment(\.dismiss) private var dismiss
     
     let content: Content
     let onAdd: () -> Result<E, AddError>
     
-    @State private var loading = false
+    @State private var buttonState: ButtonState = .resting
     
     init(
         action: @escaping () -> Result<E, AddError>,
@@ -17,18 +21,50 @@ struct AddEventView<Content: View, E: Event>: View {
         self.onAdd = action
     }
     
+    private var disableAddButton: Bool {
+        [
+            ButtonState.loading,
+            ButtonState.success,
+            ButtonState.errored
+        ].contains(buttonState)
+    }
+    
+    private var buttonTint: Color {
+        switch buttonState {
+        case .resting:
+            fallthrough
+        case .loading:
+            return Color.blue
+        case .success:
+            return Color.green
+        case .errored:
+            return Color.red
+        }
+    }
+    
     private func addAndDismiss() {
-        loading = true
+        buttonState = .loading
         
         let result = onAdd()
         
-        loading = false
-        
         switch result {
         case .success(_):
-            dismiss()
+            buttonState = .success
+            
+            WKInterfaceDevice.current().play(.success)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                dismiss()
+            }
+            
             return
         case .failure(_):
+            buttonState = .errored
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                buttonState = .resting
+            }
+            
             return
         }
     }
@@ -38,14 +74,20 @@ struct AddEventView<Content: View, E: Event>: View {
             content
             
             Button(action: addAndDismiss) {
-                if loading {
-                    Text("Adding...")
-                } else {
+                switch buttonState {
+                case .resting:
                     Text("Add")
+                case .loading:
+                    Text("Adding...")
+                case .success:
+                    Text("Added!")
+                case .errored:
+                    Text("Try again...")
                 }
             }
-            .disabled(loading)
+            .disabled(disableAddButton)
             .buttonStyle(.borderedProminent)
+            .tint(buttonTint)
             .listRowBackground(Color.clear)
         }
     }

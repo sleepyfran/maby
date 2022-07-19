@@ -19,7 +19,6 @@ struct FormPrimaryActionButtonStyle: PrimitiveButtonStyle {
         .buttonStyle(FormActionButtonStyle())
         .buttonStyle(.borderedProminent)
         .controlSize(.large)
-        .tint(.accentColor)
     }
 }
 

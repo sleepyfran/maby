@@ -83,15 +83,18 @@ private struct AddEventButton<E: Event>: View {
         return Button(action: onSelect) {
             HStack {
                 Text(icon)
+                    .font(.title)
                 
                 VStack(alignment: .leading) {
                     Text(text)
                     
-                    if lastTime != nil {
-                        Text("Last one: \(lastTime!)")
-                            .font(.callout)
-                            .foregroundColor(.gray)
-                    }
+                    Text(
+                        lastTime == nil
+                            ? "No last time"
+                            : "Last time \(lastTime!)"
+                    )
+                    .font(.callout)
+                    .foregroundColor(.gray)
                 }
             }
         }

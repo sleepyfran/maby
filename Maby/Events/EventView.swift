@@ -8,7 +8,13 @@ struct EventView: View {
     
     @ViewBuilder
     private var icon: some View {
-        if let _ = event as? DiaperEvent {
+        if let _ = event as? BottleFeedEvent {
+            EventIcon(
+                icon: "🍼",
+                startColor: .blue,
+                endColor: .blue.opacity(0.5)
+            )
+        } else if let _ = event as? DiaperEvent {
             EventIcon(
                 icon: "🧷",
                 startColor: .orange,
@@ -16,7 +22,7 @@ struct EventView: View {
             )
         } else if let _ = event as? NursingEvent {
             EventIcon(
-                icon: "🍼",
+                icon: "🤱",
                 startColor: .blue,
                 endColor: .blue.opacity(0.5)
             )
@@ -39,7 +45,9 @@ struct EventView: View {
     
     @ViewBuilder
     private var details: some View {
-        if let diaperEvent = event as? DiaperEvent {
+        if let bottleEvent = event as? BottleFeedEvent {
+            BottleEventDetails(event: bottleEvent)
+        } else if let diaperEvent = event as? DiaperEvent {
             DiaperEventDetails(event: diaperEvent)
         } else if let nursingEvent = event as? NursingEvent {
             NursingEventDetails(event: nursingEvent)
@@ -89,6 +97,26 @@ private func formatDate(for event: Event) -> String {
 }
 
 // MARK: - Detail specific views
+private struct BottleEventDetails: View {
+    let event: BottleFeedEvent
+    
+    private var formattedAmount: String {
+        let quantityWithMeasure = Measurement(
+            value: Double(event.quantity),
+            unit: UnitVolume.milliliters
+        )
+        
+        let fmt = MeasurementFormatter()
+        fmt.unitOptions = .providedUnit
+        fmt.unitStyle = .medium
+        return fmt.string(for: quantityWithMeasure)!
+    }
+    
+    var body: some View {
+        Text("Fed **\(formattedAmount)** from bottle at \(formatDate(for: event))")
+    }
+}
+
 private struct DiaperEventDetails: View {
     let event: DiaperEvent
     
@@ -181,6 +209,13 @@ private struct VomitEventDetails: View {
 #if DEBUG
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
+        EventView(event: BottleFeedEvent(
+            context: Container.previewContainer().viewContext,
+            date: Date.now,
+            quantity: 250
+        ))
+        .previewDisplayName("Bottle event")
+        
         EventView(event: DiaperEvent(
             context: Container.previewContainer().viewContext,
             date: Date.now,

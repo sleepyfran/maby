@@ -46,6 +46,24 @@ public class EventService {
         }
     }
     
+    /// Adds a new feeding from a bottle.
+    public func addBottle(
+        date: Date,
+        amount: Int
+    ) -> Result<BottleFeedEvent, AddError> {
+        let event = BottleFeedEvent(
+            context: database.container.viewContext,
+            date: date,
+            quantity: Int32(amount)
+        )
+        
+        return save(event: event)
+    }
+    
+    public func addBottle(amount: Int) -> Result<BottleFeedEvent, AddError> {
+        return addBottle(date: Date.now, amount: amount)
+    }
+    
     /// Adds a new diaper change event to the database.
     public func addDiaperChange(
         date: Date,

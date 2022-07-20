@@ -5,6 +5,9 @@
         <attribute name="gender" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="BottleFeedEvent" representedClassName="MabyKit.BottleFeedEvent" parentEntity="Event" syncable="YES">
+        <attribute name="quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="DiaperEvent" representedClassName="MabyKit.DiaperEvent" parentEntity="Event" syncable="YES">
         <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>

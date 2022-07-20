@@ -10,8 +10,14 @@ struct AddEventListView: View {
             Section("Feeding") {
                 AddEventButton<NursingEvent>(
                     "Add nursing",
-                    icon: "🍼",
+                    icon: "🤱",
                     type: .nursing
+                )
+                
+                AddEventButton<BottleFeedEvent>(
+                    "Add bottle feed",
+                    icon: "🍼",
+                    type: .bottle
                 )
             }
             
@@ -97,6 +103,9 @@ private struct AddEventButton<E: Event>: View {
         }
         .sheet(isPresented: showingAddEvent) {
             switch selectedType! {
+            case .bottle:
+                AddBottleFeedEventView()
+                    .sheetSize(.medium)
             case .diaper:
                 AddDiaperEventView()
                     .sheetSize(.medium)

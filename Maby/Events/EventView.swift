@@ -106,10 +106,7 @@ private struct BottleEventDetails: View {
             unit: UnitVolume.milliliters
         )
         
-        let fmt = MeasurementFormatter()
-        fmt.unitOptions = .providedUnit
-        fmt.unitStyle = .medium
-        return fmt.string(for: quantityWithMeasure)!
+        return formatMl(amount: quantityWithMeasure)
     }
     
     var body: some View {

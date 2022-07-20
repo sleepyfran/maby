@@ -8,6 +8,13 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
+            // In the emulator, CoreData will NEVER sync with CloudKit and therefore
+            // we'd never have any data to show even if there's indeed a baby already
+            // added in the main app. So only have the check for production. Yeah,
+            // I know, I know...
+            #if DEBUG
+            AddEventListView()
+            #else
             if babies.isEmpty {
                 VStack(alignment: .leading) {
                     Text("No data")
@@ -18,6 +25,7 @@ struct ContentView: View {
             } else {
                 AddEventListView()
             }
+            #endif
         }
     }
 }

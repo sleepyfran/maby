@@ -46,7 +46,7 @@ struct AddNursingEventView: View {
             }
             .pickerStyle(.inline)
         }
-        .navigationTitle("🍼 Nursing")
+        .navigationTitle("🤱 Nursing")
     }
 }
 

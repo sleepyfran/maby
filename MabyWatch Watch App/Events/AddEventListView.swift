@@ -7,7 +7,11 @@ struct AddEventListView: View {
             List {
                 Section("Feeding") {
                     NavigationLink(destination: AddNursingEventView()) {
-                        Text("🍼 Nursing")
+                        Text("🤱 Nursing")
+                    }
+                    
+                    NavigationLink(destination: AddBottleFeedEventView()) {
+                        Text("🍼 Bottle")
                     }
                 }
                 

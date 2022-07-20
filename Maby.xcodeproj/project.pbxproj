@@ -12,6 +12,7 @@
 		C901566E2884E38000DAC7E7 /* AddSleepEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901566D2884E37F00DAC7E7 /* AddSleepEventView.swift */; };
 		C90156702884E4B500DAC7E7 /* AddVomitEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901566F2884E4B500DAC7E7 /* AddVomitEventView.swift */; };
 		C90156A72885BE8600DAC7E7 /* Maby.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C9A78ACA2884387D00753D58 /* Maby.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C90F725828883B1B005FF2AB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F725728883B1B005FF2AB /* SettingsView.swift */; };
 		C938D90928844CE40041A3FA /* AddEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90828844CE40041A3FA /* AddEventListView.swift */; };
 		C938D90D28844F0A0041A3FA /* AddNursingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90C28844F0A0041A3FA /* AddNursingEventView.swift */; };
 		C938D90F288454440041A3FA /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = C938D90E288454440041A3FA /* Factory */; };
@@ -69,6 +70,7 @@
 		C901566B2884DF5500DAC7E7 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		C901566D2884E37F00DAC7E7 /* AddSleepEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSleepEventView.swift; sourceTree = "<group>"; };
 		C901566F2884E4B500DAC7E7 /* AddVomitEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVomitEventView.swift; sourceTree = "<group>"; };
+		C90F725728883B1B005FF2AB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C91DF4B02884D6110014F602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C91DF4B12884D6360014F602 /* MabyWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MabyWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		C91DF4B22884D6560014F602 /* MabyWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MabyWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -122,6 +124,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C90F725628883B10005FF2AB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C90F725728883B1B005FF2AB /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		C938D90A28844CEA0041A3FA /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				C91DF4B02884D6110014F602 /* Info.plist */,
+				C90F725628883B10005FF2AB /* Settings */,
 				C953DD39287E0B3E00F1E1B7 /* Events */,
 				C9B95D10287DA99A00ADC43F /* Baby */,
 				C9B95D0B287DA6BF00ADC43F /* Journal */,
@@ -377,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C90F725828883B1B005FF2AB /* SettingsView.swift in Sources */,
 				C953DD43287F206400F1E1B7 /* AddNursingEventView.swift in Sources */,
 				C9B95D12287DA9D000ADC43F /* AddBabyView.swift in Sources */,
 				C9B95D16287DF50D00ADC43F /* BabyCard.swift in Sources */,

@@ -21,6 +21,11 @@ struct ContentView: View {
                     .tabItem {
                         Label("Journal", systemImage: "book")
                     }
+                
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
             }
         }
         .sheet(isPresented: $showingAddBaby) {

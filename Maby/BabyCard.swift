@@ -9,8 +9,12 @@ struct BabyCard: View {
         self._babies = FetchRequest(fetchRequest: allBabies)
     }
     
-    private var baby: Baby {
-        babies.first!
+    private var name: String {
+        babies.first?.name ?? ""
+    }
+    
+    private var age: String {
+        babies.first?.formattedAge ?? ""
     }
     
     var body: some View {
@@ -21,10 +25,10 @@ struct BabyCard: View {
                     .padding([.trailing], 20)
                 
                 VStack(alignment: .leading) {
-                    Text(baby.name)
+                    Text(name)
                         .font(.title)
                     
-                    Text("\(baby.formattedAge) old")
+                    Text("\(age) old")
                         .font(.callout)
                         .foregroundColor(.gray)
                 }

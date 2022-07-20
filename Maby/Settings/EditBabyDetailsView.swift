@@ -43,6 +43,10 @@ struct EditBabyDetailsView: View {
             }
         }
         .onAppear {
+            if babies.isEmpty {
+                return
+            }
+            
             let baby = babies.first!
             
             self.name = baby.name

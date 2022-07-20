@@ -8,10 +8,16 @@ public func isValidBaby(name: String, birthday: Date) -> Bool {
 
 public class BabyService {
     let database: PersistenceController
+    let eventService: EventService
     let logger: Logger
     
-    init(database: PersistenceController, logger: Logger) {
+    init(
+        database: PersistenceController,
+        eventService: EventService,
+        logger: Logger
+    ) {
         self.database = database
+        self.eventService = eventService
         self.logger = logger
     }
     
@@ -62,6 +68,19 @@ public class BabyService {
         } catch (let error) {
             logger.error("Attempted to save database after editing baby, but failed with reason: \(error)")
             return .failure(.databaseError)
+        }
+    }
+    
+    /// Removes the given baby from the database.
+    public func remove(baby: Baby) {
+        database.container.viewContext.delete(baby)
+        
+        eventService.deleteAll()
+        
+        do {
+            try database.container.viewContext.save()
+        } catch (let error) {
+            logger.error("Attempted to save database after removing baby, but failed with reason: \(error)")
         }
     }
 }

@@ -34,6 +34,18 @@ public class EventService {
         }
     }
     
+    /// Removes **ALL** events from the database.
+    public func deleteAll() {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Event")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try database.container.viewContext.execute(deleteRequest)
+        } catch (let error) {
+            logger.error("Attempted to remove ALL events, but failed with reason: \(error)")
+        }
+    }
+    
     /// Adds a new diaper change event to the database.
     public func addDiaperChange(
         date: Date,

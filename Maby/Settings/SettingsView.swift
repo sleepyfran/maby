@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @State private var showingEditBaby = false
+    @State private var showingRemoveBaby = false
     
     private var sourceCodeUrl: URL {
         return URL(string: "https://github.com/sleepyfran/maby/")!
@@ -32,7 +33,7 @@ struct SettingsView: View {
                     Label("Edit baby details", systemImage: "info.square.fill")
                 }
                 
-                Button(action: { }) {
+                Button(action: { showingRemoveBaby.toggle() }) {
                     Label("Remove baby", systemImage: "trash.square.fill")
                         .symbolRenderingMode(.multicolor)
                 }
@@ -40,7 +41,7 @@ struct SettingsView: View {
             
             Section("About") {
                 Link(destination: sourceCodeUrl) {
-                    Label("Open source code", systemImage: "macwindow")
+                    Label("Open source code", systemImage: "arrow.up.right.square.fill")
                         .symbolRenderingMode(.multicolor)
                 }
             }
@@ -59,7 +60,10 @@ struct SettingsView: View {
         }
         .sheet(isPresented: $showingEditBaby) {
             EditBabyDetailsView()
-                .interactiveDismissDisabled(true)
+        }
+        .sheet(isPresented: $showingRemoveBaby) {
+            RemoveBabyView()
+                .sheetSize(.medium)
         }
     }
 }

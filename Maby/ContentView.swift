@@ -9,6 +9,10 @@ struct ContentView: View {
     
     @State private var showingAddBaby = false
     
+    private let databaseUpdates = NotificationCenter.default.publisher(
+        for: .NSManagedObjectContextDidSave
+    )
+    
     var body: some View {
         TabView {
             if !babies.isEmpty {
@@ -34,6 +38,13 @@ struct ContentView: View {
         }
         .onAppear {
             showingAddBaby = babies.isEmpty
+        }
+        .onReceive(databaseUpdates) { _ in
+            // Delay showing the sheet to give time for the rest of the sheets to hide.
+            // Removing this results in the sheet not being shown due to the delete one being shown still.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                showingAddBaby = babies.isEmpty
+            }
         }
     }
 }

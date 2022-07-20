@@ -6,9 +6,6 @@ import SwiftUI
 struct JournalView: View {
     @Injected(Container.eventService) private var eventService
     
-    @FetchRequest(fetchRequest: allBabies)
-    private var babies: FetchedResults<Baby>
-    
     @SectionedFetchRequest<Date, Event>(
         sectionIdentifier: \.groupStart,
         sortDescriptors: [
@@ -18,7 +15,7 @@ struct JournalView: View {
     
     var body: some View {
         List {
-            BabyCard(baby: babies.first!)
+            BabyCard()
                 .clearBackground()
             
             ForEach(events) { section in

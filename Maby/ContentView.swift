@@ -14,7 +14,7 @@ struct ContentView: View {
             if !babies.isEmpty {
                 AddEventListView()
                     .tabItem {
-                        Label("Add event", systemImage: "plus.circle")
+                        Label("Add event", systemImage: "plus")
                     }
                 
                 JournalView()

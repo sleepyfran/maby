@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State private var showingEditBaby = false
+    
     private var sourceCodeUrl: URL {
         return URL(string: "https://github.com/sleepyfran/maby/")!
     }
@@ -26,12 +28,12 @@ struct SettingsView: View {
     var body: some View {
         List {
             Section("Baby") {
-                Button(action: { }) {
-                    Label("Edit baby details", systemImage: "info.circle.fill")
+                Button(action: { showingEditBaby.toggle() }) {
+                    Label("Edit baby details", systemImage: "info.square.fill")
                 }
                 
                 Button(action: { }) {
-                    Label("Remove baby", systemImage: "trash.circle.fill")
+                    Label("Remove baby", systemImage: "trash.square.fill")
                         .symbolRenderingMode(.multicolor)
                 }
             }
@@ -54,6 +56,10 @@ struct SettingsView: View {
             .listRowSeparator(.hidden)
             .frame(maxWidth: .infinity, alignment: .center)
             .clearBackground()
+        }
+        .sheet(isPresented: $showingEditBaby) {
+            EditBabyDetailsView()
+                .interactiveDismissDisabled(true)
         }
     }
 }

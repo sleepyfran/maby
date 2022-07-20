@@ -3,7 +3,15 @@ import MabyKit
 import SwiftUI
 
 struct BabyCard: View {
-    let baby: Baby
+    @FetchRequest private var babies: FetchedResults<Baby>
+    
+    init() {
+        self._babies = FetchRequest(fetchRequest: allBabies)
+    }
+    
+    private var baby: Baby {
+        babies.first!
+    }
     
     var body: some View {
         VStack {
@@ -33,16 +41,8 @@ struct BabyCard: View {
 #if DEBUG
 struct BabyCard_Previews: PreviewProvider {
     static var previews: some View {
-        BabyCard(baby: Baby(
-            context: Container.previewContainer().viewContext,
-            name: "Test Baby",
-            birthday: Calendar.current.date(
-                byAdding: .weekOfMonth,
-                value: -10,
-                to: Date.now
-            )!,
-            gender: Baby.Gender.boy
-        ))
+        BabyCard()
+            .mockedDependencies()
     }
 }
 #endif

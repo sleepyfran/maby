@@ -2,12 +2,9 @@ import MabyKit
 import SwiftUI
 
 struct AddEventListView: View {
-    @FetchRequest(fetchRequest: allBabies)
-    private var babies: FetchedResults<Baby>
-    
     var body: some View {
         List {
-            BabyCard(baby: babies.first!)
+            BabyCard()
                 .clearBackground()
             
             Section("Feeding") {

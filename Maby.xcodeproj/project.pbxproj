@@ -13,6 +13,8 @@
 		C90156702884E4B500DAC7E7 /* AddVomitEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C901566F2884E4B500DAC7E7 /* AddVomitEventView.swift */; };
 		C90156A72885BE8600DAC7E7 /* Maby.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C9A78ACA2884387D00753D58 /* Maby.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C90F725828883B1B005FF2AB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F725728883B1B005FF2AB /* SettingsView.swift */; };
+		C90F725A2888432A005FF2AB /* EditBabyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F72592888432A005FF2AB /* EditBabyDetailsView.swift */; };
+		C90F725C28884379005FF2AB /* BabyDetailsFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F725B28884379005FF2AB /* BabyDetailsFormView.swift */; };
 		C938D90928844CE40041A3FA /* AddEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90828844CE40041A3FA /* AddEventListView.swift */; };
 		C938D90D28844F0A0041A3FA /* AddNursingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938D90C28844F0A0041A3FA /* AddNursingEventView.swift */; };
 		C938D90F288454440041A3FA /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = C938D90E288454440041A3FA /* Factory */; };
@@ -71,6 +73,8 @@
 		C901566D2884E37F00DAC7E7 /* AddSleepEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSleepEventView.swift; sourceTree = "<group>"; };
 		C901566F2884E4B500DAC7E7 /* AddVomitEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVomitEventView.swift; sourceTree = "<group>"; };
 		C90F725728883B1B005FF2AB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C90F72592888432A005FF2AB /* EditBabyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBabyDetailsView.swift; sourceTree = "<group>"; };
+		C90F725B28884379005FF2AB /* BabyDetailsFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyDetailsFormView.swift; sourceTree = "<group>"; };
 		C91DF4B02884D6110014F602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C91DF4B12884D6360014F602 /* MabyWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MabyWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		C91DF4B22884D6560014F602 /* MabyWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MabyWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -127,7 +131,10 @@
 		C90F725628883B10005FF2AB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				C9B95D11287DA9D000ADC43F /* AddBabyView.swift */,
+				C90F72592888432A005FF2AB /* EditBabyDetailsView.swift */,
 				C90F725728883B1B005FF2AB /* SettingsView.swift */,
+				C90F725B28884379005FF2AB /* BabyDetailsFormView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -201,8 +208,6 @@
 		C9B95D10287DA99A00ADC43F /* Baby */ = {
 			isa = PBXGroup;
 			children = (
-				C9B95D11287DA9D000ADC43F /* AddBabyView.swift */,
-				C9B95D15287DF50D00ADC43F /* BabyCard.swift */,
 			);
 			path = Baby;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				C9B95D10287DA99A00ADC43F /* Baby */,
 				C9B95D0B287DA6BF00ADC43F /* Journal */,
 				C9B95D07287CA01800ADC43F /* Common */,
+				C9B95D15287DF50D00ADC43F /* BabyCard.swift */,
 				C9ED2EA1287C745100BA3228 /* MabyApp.swift */,
 				C9ED2EA8287C745100BA3228 /* ContentView.swift */,
 				C9ED2EAA287C745300BA3228 /* Assets.xcassets */,
@@ -395,8 +401,10 @@
 				C9D2C0832880D1DC00F85D8F /* EventView.swift in Sources */,
 				C9ED2EA2287C745100BA3228 /* MabyApp.swift in Sources */,
 				C969734B2881B0FA00156287 /* AddEventView.swift in Sources */,
+				C90F725C28884379005FF2AB /* BabyDetailsFormView.swift in Sources */,
 				C953DD41287F011B00F1E1B7 /* AddDiaperEventView.swift in Sources */,
 				C953DD3D287E0C0700F1E1B7 /* AddEventListView.swift in Sources */,
+				C90F725A2888432A005FF2AB /* EditBabyDetailsView.swift in Sources */,
 				C9B95D09287CA02400ADC43F /* View+Extensions.swift in Sources */,
 				C969734D2881EF4400156287 /* AddVomitEventView.swift in Sources */,
 				C9B95D14287DAD9C00ADC43F /* ButtonStyles.swift in Sources */,

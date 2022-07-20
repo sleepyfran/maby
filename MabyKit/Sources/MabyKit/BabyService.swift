@@ -21,7 +21,7 @@ public class BabyService {
         birthday: Date,
         gender: Baby.Gender
     ) -> Result<Baby, AddError> {
-        if (!isValidBaby(name: name, birthday: birthday)) {
+        if !isValidBaby(name: name, birthday: birthday) {
             return .failure(.invalidData)
         }
         
@@ -37,6 +37,30 @@ public class BabyService {
             return .success(baby)
         } catch(let error) {
             logger.error("Attempted to save database with new baby, but failed with reason: \(error)")
+            return .failure(.databaseError)
+        }
+    }
+    
+    /// Edits the given baby with the provided details.
+    public func edit(
+        baby: Baby,
+        name: String,
+        birthday: Date,
+        gender: Baby.Gender
+    ) -> Result<Baby, AddError> {
+        if !isValidBaby(name: name, birthday: birthday) {
+            return .failure(.invalidData)
+        }
+        
+        baby.name = name
+        baby.gender = gender
+        baby.birthday = birthday
+        
+        do {
+            try database.container.viewContext.save()
+            return .success(baby)
+        } catch (let error) {
+            logger.error("Attempted to save database after editing baby, but failed with reason: \(error)")
             return .failure(.databaseError)
         }
     }

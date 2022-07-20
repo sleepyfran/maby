@@ -5,14 +5,70 @@ struct AddEventListView: View {
     @FetchRequest(fetchRequest: allBabies)
     private var babies: FetchedResults<Baby>
     
+    var body: some View {
+        List {
+            BabyCard(baby: babies.first!)
+                .clearBackground()
+            
+            Section("Feeding") {
+                AddEventButton<NursingEvent>(
+                    "Add nursing",
+                    icon: "🍼",
+                    type: .nursing
+                )
+            }
+            
+            Section("Hygiene") {
+                AddEventButton<DiaperEvent>(
+                    "Add diaper change",
+                    icon: "🧷",
+                    type: .diaper
+                )
+            }
+            
+            Section("Health") {
+                AddEventButton<SleepEvent>(
+                    "Add sleep",
+                    icon: "🌝",
+                    type: .sleep
+                )
+                
+                AddEventButton<VomitEvent>(
+                    "Add vomit",
+                    icon: "🤢",
+                    type: .vomit
+                )
+            }
+        }
+    }
+}
+
+private struct AddEventButton<E: Event>: View {
+    private let text: LocalizedStringKey
+    private let icon: LocalizedStringKey
+    private let type: EventType
+    
     @State private var selectedType: EventType? = nil
     
-    private func onSelect(type: EventType) {
-        selectedType = type
+    @FetchRequest(fetchRequest: MabyKit.lastEvent())
+    private var lastEvent: FetchedResults<E>
+    
+    init(
+        _ text: LocalizedStringKey,
+        icon: LocalizedStringKey,
+        type: EventType
+    ) {
+        self.text = text
+        self.icon = icon
+        self.type = type
     }
     
-    private func onDismiss() {
-        selectedType = nil
+    private var lastTime: String? {
+        lastEvent.first?.start.formatted(.relative(presentation: .named))
+    }
+    
+    private func onSelect() {
+        selectedType = type
     }
     
     var body: some View {
@@ -24,33 +80,22 @@ struct AddEventListView: View {
             set: { _, _ in selectedType = nil }
         )
         
-        return List {
-            BabyCard(baby: babies.first!)
-                .clearBackground()
-            
-            Section("Feeding") {
-                Button(action: { onSelect(type: .nursing) }) {
-                    Text("🍼 Add nursing")
-                }
-            }
-            
-            Section("Hygiene") {
-                Button(action: { onSelect(type: .diaper) }) {
-                    Text("🧷 Add diaper change")
-                }
-            }
-            
-            Section("Health") {
-                Button(action: { onSelect(type: .sleep) }) {
-                    Text("🌝 Add sleep")
-                }
+        return Button(action: onSelect) {
+            HStack {
+                Text(icon)
                 
-                Button(action: { onSelect(type: .vomit) }) {
-                    Text("🤢 Add vomit")
+                VStack(alignment: .leading) {
+                    Text(text)
+                    
+                    if lastTime != nil {
+                        Text("Last one: \(lastTime!)")
+                            .font(.callout)
+                            .foregroundColor(.gray)
+                    }
                 }
             }
         }
-        .sheet(isPresented: showingAddEvent, onDismiss: onDismiss) {
+        .sheet(isPresented: showingAddEvent) {
             switch selectedType! {
             case .diaper:
                 AddDiaperEventView()

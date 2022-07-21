@@ -20,6 +20,8 @@ The app uses CloudKit to sync all the data, so a **paid** developer account is n
 
 And in the `Persistence.swift` file inside of `MabyKit`, change `NSPersistentCloudKitContainer` to `NSPersistentContainer`. The app will then hopefully build correctly 🙂
 
+> Please note that if you disabled CloudKit the watchOS companion app will **not** work since it relies on CloudKit to communicate with the iOS database. If disabled, the watchOS app will basically create a new local database internally, completely independent from the iOS app, so you won't be able to see any of the events that you add through it.
+
 ## 🏞 Show me!
 
 The app consist in a main iOS app that allows for adding events and visualizing them through a journal:
@@ -40,7 +42,7 @@ _(This one comes super in-handy during nights, trust me)_
 
 ## ⬇️ Where can I get it?
 
-Currently the app is waiting for public release approval, once done there'll be a TestFlight URL over here. In the meantime you can either compile it yourself following the steps above or contact me personally so that I can add you to the invitation list 🙂
+Currently the app is still in beta phase and only available through TestFlight, but you can access the beta through [this link](https://testflight.apple.com/join/dut6FQhY).
 
 ## 😀 Contributions/feedback
 

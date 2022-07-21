@@ -66,8 +66,22 @@ private struct AddEventButton<E: Event>: View {
         self.type = type
     }
     
-    private var lastTime: String? {
-        lastEvent.first?.start.formatted(.relative(presentation: .named))
+    private var lastTime: Date? {
+        guard let event = lastEvent.first else {
+            return nil
+        }
+        
+        if let nursingEvent = event as? NursingEvent {
+            return nursingEvent.end
+        } else if let sleepEvent = event as? SleepEvent {
+            return sleepEvent.end
+        } else {
+            return event.start
+        }
+    }
+    
+    private var lastTimeFormatted: String? {
+        lastTime?.formatted(.relative(presentation: .named))
     }
     
     private func onSelect() {
@@ -92,9 +106,9 @@ private struct AddEventButton<E: Event>: View {
                     Text(text)
                     
                     Text(
-                        lastTime == nil
+                        lastTimeFormatted == nil
                             ? "No last time"
-                            : "Last time \(lastTime!)"
+                            : "Last time \(lastTimeFormatted!)"
                     )
                     .font(.callout)
                     .foregroundColor(.gray)

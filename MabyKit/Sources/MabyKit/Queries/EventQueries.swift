@@ -6,7 +6,7 @@ import Foundation
 public func lastEvent<E: Event>() -> NSFetchRequest<E> {
     let request = E.fetchRequest() as! NSFetchRequest<E>
     request.sortDescriptors = [
-        NSSortDescriptor(keyPath: \Event.start, ascending: true)
+        NSSortDescriptor(keyPath: \Event.start, ascending: false)
     ]
     request.fetchLimit = 1
     return request

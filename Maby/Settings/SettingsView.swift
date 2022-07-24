@@ -28,6 +28,9 @@ struct SettingsView: View {
     
     var body: some View {
         List {
+            BabyCard()
+                .clearBackground()
+            
             Section("Baby") {
                 Button(action: { showingEditBaby.toggle() }) {
                     Label("Edit baby details", systemImage: "info.square.fill")
@@ -71,5 +74,6 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+            .mockedDependencies()
     }
 }

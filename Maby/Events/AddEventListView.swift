@@ -1,3 +1,4 @@
+import Combine
 import MabyKit
 import SwiftUI
 
@@ -50,8 +51,15 @@ private struct AddEventButton<E: Event>: View {
     private let text: LocalizedStringKey
     private let icon: LocalizedStringKey
     private let type: EventType
+    // TODO: Consider changing timer tick depending on last time (an event that is already more than an hour old doesn't need to be updated every 30 seconds)
+    private let updateTimer = Timer.publish(
+        every: 30,
+        on: .main,
+        in: .common
+    ).autoconnect()
     
     @State private var selectedType: EventType? = nil
+    @State private var lastTime: String? = nil
     
     @FetchRequest(fetchRequest: MabyKit.lastEvent())
     private var lastEvent: FetchedResults<E>
@@ -66,22 +74,24 @@ private struct AddEventButton<E: Event>: View {
         self.type = type
     }
     
-    private var lastTime: Date? {
+    private func updateLastTime() {
         guard let event = lastEvent.first else {
-            return nil
+            lastTime = nil
+            return
         }
         
+        var eventTime: Date
         if let nursingEvent = event as? NursingEvent {
-            return nursingEvent.end
+            eventTime = nursingEvent.end
         } else if let sleepEvent = event as? SleepEvent {
-            return sleepEvent.end
+            eventTime = sleepEvent.end
         } else {
-            return event.start
+            eventTime = event.start
         }
-    }
-    
-    private var lastTimeFormatted: String? {
-        lastTime?.formatted(.relative(presentation: .named))
+        
+        lastTime = eventTime.formatted(
+            .relative(presentation: .named)
+        )
     }
     
     private func onSelect() {
@@ -106,9 +116,9 @@ private struct AddEventButton<E: Event>: View {
                     Text(text)
                     
                     Text(
-                        lastTimeFormatted == nil
+                        lastTime == nil
                             ? "No last time"
-                            : "Last time \(lastTimeFormatted!)"
+                            : "Last time \(lastTime!)"
                     )
                     .font(.callout)
                     .foregroundColor(.gray)
@@ -133,6 +143,15 @@ private struct AddEventButton<E: Event>: View {
                 AddVomitEventView()
                     .sheetSize(.medium)
             }
+        }
+        .onAppear {
+            updateLastTime()
+        }
+        .onReceive(lastEvent.publisher) { _ in
+            updateLastTime()
+        }
+        .onReceive(updateTimer) { _ in
+            updateLastTime()
         }
     }
 }

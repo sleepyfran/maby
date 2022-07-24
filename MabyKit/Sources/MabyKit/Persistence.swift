@@ -23,16 +23,15 @@ public struct PersistenceController {
         
         let nursingEvent = NursingEvent(
             context: viewContext,
-            start: Date.now,
-            end: Calendar.current.date(byAdding: .minute, value: 24, to: Date.now)!,
+            start: Calendar.current.date(byAdding: .minute, value: -48, to: Date.now)!,
+            end: Calendar.current.date(byAdding: .minute, value: -24, to: Date.now)!,
             breast: .left
         )
         
-        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date.now)!
         let sleepEvent = SleepEvent(
             context: viewContext,
-            start: tomorrow,
-            end: Calendar.current.date(byAdding: .hour, value: 2, to: tomorrow)!
+            start: Calendar.current.date(byAdding: .hour, value: -1, to: Date.now)!,
+            end: Date.now
         )
         
         do {

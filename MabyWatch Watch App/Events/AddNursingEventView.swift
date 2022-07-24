@@ -32,7 +32,7 @@ struct AddNursingEventView: View {
                 VStack(alignment: .leading) {
                     Text("\(formattedDuration) minutes")
                     
-                    Slider(value: $duration, in: 1...60, step: 1) {
+                    Slider(value: $duration, in: 2...60, step: 1) {
                         Text("Duration")
                     }
                 }

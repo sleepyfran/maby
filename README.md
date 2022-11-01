@@ -42,7 +42,7 @@ _(This one comes super in-handy during nights, trust me)_
 
 ## ⬇️ Where can I get it?
 
-Currently the app is still in beta phase and only available through TestFlight, but you can access the beta through [this link](https://testflight.apple.com/join/dut6FQhY).
+[<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">](https://apps.apple.com/us/app/maby-baby-tracker/id1635144505)
 
 ## 😀 Contributions/feedback
 

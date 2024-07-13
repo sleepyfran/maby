@@ -42,7 +42,7 @@ _(This one comes super in-handy during nights, trust me)_
 
 ## ⬇️ Where can I get it?
 
-[<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">](https://apps.apple.com/us/app/maby-baby-tracker/id1635144505)
+I no longer have an App Store Developer account, so the app is not available on the App Store anymore. You can freely fork this and publish it yourself, or compile it locally and side-load it to your device :^)
 
 ## 😀 Contributions/feedback
 
